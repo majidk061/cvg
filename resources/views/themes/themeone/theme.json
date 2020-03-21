@@ -1,0 +1,8 @@
+{
+    "name": "cvg",
+    "author": "Karlo Mikuš",
+    "description": "Default theme description",
+    "version": "1.0",
+    "namespace": "cvg",
+    "parent": null
+}
