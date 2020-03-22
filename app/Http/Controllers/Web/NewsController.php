@@ -116,7 +116,7 @@ class NewsController extends DataController
 			$result['limit'] = $limit;
 		}			
 		$result['categories_name'] = $categories_name;
-		return view("news", $title)->with('result', $result);
+		return view("themes.themeone.views.news", $title)->with('result', $result);
 	
 	}
 	

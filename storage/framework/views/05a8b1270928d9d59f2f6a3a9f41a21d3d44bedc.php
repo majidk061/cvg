@@ -11,18 +11,18 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="#header">Home</a></li>
+          <li class="active"><a href="<?php echo e(URL::to('/index')); ?>">Home</a></li>
           <li class="drop-down"><a href="">About Us</a>
             <ul>
-              <li><a href="#">Our Company</a></li>
+              <li><a href="<?php echo e(URL::to('our-company')); ?>">Our Company</a></li>
               <li><a href="#">Our Locations</a></li> 
             </ul>
           </li>
-          <li><a href="#about">Services</a></li>
-          <li><a href="#services">Franchise With CVG</a></li>
-          <li><a href="#portfolio">Testimonials</a></li>
-          <li><a href="#team">News</a></li>
-          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="<?php echo e(URL::to('services')); ?>">Services</a></li>
+          <li><a href="<?php echo e(URL::to('Franchise-With-CVG')); ?>">Franchise With CVG</a></li>
+          <li><a href="<?php echo e(URL::to('Franchise-With-CVG')); ?>">Testimonials</a></li>
+          <li><a href="<?php echo e(URL::to('news')); ?>">News</a></li>
+          <li><a href="<?php echo e(URL::to('contact-us')); ?>">Contact Us</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 

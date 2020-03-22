@@ -1,11 +1,30 @@
-<main id="main">
+ 
+<?php $__env->startSection('content'); ?>
+<!-- ======= Hero Section ======= -->
+ 
+  <section id="hero">
+     <div class="row">
+       <img src="https://ricinzconstruction.co.za/wp-content/uploads/2018/02/about-us-banner.jpg" class="static-img">
+     </div>
+     
+  </section><!-- End Hero -->
+
+  <div class="container-fluid">
+    <div class="container">
+       <div class="bradcram bounceInLeft animated">
+         Home / Contact Us
+       </div>
+     </div>
+  </div>
+  <main id="main">
 <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact section-bg">
       <div class="container">
 
         <div class="section-title">
-          <h2 data-aos="fade-in">Contact</h2>
-          <p data-aos="fade-in">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2 data-aos="fade-in">Contact Us</h2>
+          <p data-aos="fade-in">For more information about how may assist you, please contact our US Headquarters directly by phone or
+email.</p>
         </div>
 
         <div class="row">
@@ -17,21 +36,22 @@
                 <div class="info-box" data-aos="fade-up">
                   <i class="bx bx-map"></i>
                   <h3>Our Address</h3>
-                  <p>A108 Adam Street, New York, NY 535022</p>
+                  <p>401 East Olas Blvd., Ste. 1400</p>
+                  <p>Fort Lauderdale, Florida 33301</p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="info-box mt-4" data-aos="fade-up" data-aos-delay="100">
                   <i class="bx bx-envelope"></i>
                   <h3>Email Us</h3>
-                  <p>info@example.com<br>contact@example.com</p>
+                  <p>franchise@cvgmanagement.com</p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="info-box mt-4" data-aos="fade-up" data-aos-delay="100">
                   <i class="bx bx-phone-call"></i>
                   <h3>Call Us</h3>
-                  <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
+                  <p>+1 954-332-244</p>
                 </div>
               </div>
             </div>
@@ -72,3 +92,7 @@
       </div>
     </section><!-- End Contact Section -->
 </main>
+  <?php $__env->stopSection(); ?>
+
+
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

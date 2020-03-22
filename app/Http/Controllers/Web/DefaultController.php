@@ -184,13 +184,40 @@ class DefaultController extends DataController
 		
 	}
 	
+	//our company
+	public function OurCompany(Request $request){
+		$title = array('pageTitle' => Lang::get("website.Contact Us"));
+		$result = array();			
+		$result['commonContent'] = $this->commonContent();
+		
+		return view("cvg.about-us.our-company.index", $title)->with('result', $result); 
+	}
+
+	//Franchise With CVG
+	public function Franchise(Request $request){
+		$title = array('pageTitle' => Lang::get("website.Contact Us"));
+		$result = array();			
+		$result['commonContent'] = $this->commonContent();
+		
+		return view("cvg.franchise.index", $title)->with('result', $result); 
+	}
+
+	//services
+	public function Services(Request $request){
+		$title = array('pageTitle' => Lang::get("website.Contact Us"));
+		$result = array();			
+		$result['commonContent'] = $this->commonContent();
+		
+		return view("cvg.service.index", $title)->with('result', $result); 
+	}
+
 	//myContactUs
 	public function ContactUs(Request $request){
 		$title = array('pageTitle' => Lang::get("website.Contact Us"));
 		$result = array();			
 		$result['commonContent'] = $this->commonContent();
 		
-		return view("contact-us", $title)->with('result', $result); 
+		return view("cvg.contact-us.index", $title)->with('result', $result); 
 	}
 	
 	//processContactUs

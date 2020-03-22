@@ -462,6 +462,10 @@ Route::post('/language/', array(
 	Route::get('/', 'DefaultController@index');
 	Route::get('/index', 'DefaultController@index');
 	
+
+	Route::get('/our-company', 'DefaultController@OurCompany');
+	Route::get('/services', 'DefaultController@Services');
+	Route::get('/Franchise-With-CVG', 'DefaultController@Franchise');
 	Route::get('/contact-us', 'DefaultController@ContactUs');
 	Route::post('/processContactUs', 'DefaultController@processContactUs');
 
