@@ -12,10 +12,10 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img class="d-block w-100 flip" src="https://readcivil.com/wp-content/uploads/2017/08/Construction.jpg" alt="First slide">
+          <img class="d-block w-100 flip" src="https://www.build-review.com/wp-content/uploads/2019/06/Travel.jpg" alt="First slide">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100 flip" src="https://www.zohowebstatic.com/sites/default/files/projects/construction-header.png" alt="Second slide">
+          <img class="d-block w-100 flip" src="https://p5w7e8h7.stackpathcdn.com/Files/Images/Home/AEC-top.png" alt="Second slide">
         </div>
         <div class="carousel-item">
           <img class="d-block w-100 flip" src="https://images.shiksha.com/mediadata/images/articles/1569311111php6YNAke.jpeg" alt="Third slide">
@@ -34,55 +34,6 @@
   </section><!-- End Hero -->
 
   <main id="main">
-
-    <!-- ======= Clients Section ======= -->
-    <section id="clients" class="clients section-bg">
-      <div class="container">
-
-        <div class="row no-gutters clients-wrap clearfix wow fadeInUp">
-
-          <div class="col-lg-2 col-md-4 col-6">
-            <div class="client-logo">
-              <img src="assets/img/clients/client-1.png" class="img-fluid" alt="" data-aos="flip-right">
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6">
-            <div class="client-logo">
-              <img src="assets/img/clients/client-2.png" class="img-fluid" alt="" data-aos="flip-right" data-aos-delay="100">
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6">
-            <div class="client-logo">
-              <img src="assets/img/clients/client-3.png" class="img-fluid" alt="" data-aos="flip-right" data-aos-delay="200">
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6">
-            <div class="client-logo">
-              <img src="assets/img/clients/client-4.png" class="img-fluid" alt="" data-aos="flip-right" data-aos-delay="300">
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6">
-            <div class="client-logo">
-              <img src="assets/img/clients/client-5.png" class="img-fluid" alt="" data-aos="flip-right" data-aos-delay="400">
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6">
-            <div class="client-logo">
-              <img src="assets/img/clients/client-6.png" class="img-fluid" alt="" data-aos="flip-right" data-aos-delay="500">
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Clients Section -->
- 
-
     <!-- ======= Frequently Asked Questions Section ======= -->
     <section id="faq" class="faq section-bg">
       <div class="container">

@@ -23,31 +23,59 @@
 
         <div class="section-title">
           <h2 data-aos="fade-in">Services</h2>
-          <p data-aos="fade-in">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <div class="row  d-flex align-items-stretch" data-aos="fade-up">
+            <div class="col-lg-12">
+              <p class="text-justify">
+                CVG offers an array of services to provide clients with modules specific and tailored to their project
+needs. Clients only incur costs for the module(s) required, and services can be scaled on a fair and
+measurable cost-deliverable basis. Every initiative is treated as its own, and CVG welcomes standard
+and uncommon projects with equal enthusiasm and a fresh perspective.
+              </p>
+            </div>
+          </div><!-- End F.A.Q Item-->
+          <div class="row  d-flex align-items-stretch" data-aos="fade-up">
+            <div class="col-lg-12">
+              <p class="text-justify">
+                CVG provides services for all Phases of the construction management process including: Program
+Mapping, Conceptual, Preconstruction, Construction &amp; Control, and Closing &amp; Maintenance.
+              </p>
+            </div>
+          </div><!-- End F.A.Q Item-->
+          <div class="clearfix">&nbsp;</div>
+          <div class="row  d-flex align-items-stretch" data-aos="fade-up">
+            <div class="col-lg-12">
+              <p class="text-justify">
+                <strong>
+               CVG PROVIDES SERVICE MODULES FOR
+               </strong>
+              </p>
+            </div>
+          </div><!-- End F.A.Q Item-->
         </div>
 
         <div class="row">
           <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-right">
             <div class="card">
               <div class="card-img">
-                <img src="assets/img/services-1.jpg" alt="...">
+                <img src="<?php echo e(asset('public/assets/img/services-1.jpg')); ?>" alt="...">
               </div>
               <div class="card-body">
-                <h5 class="card-title"><a href="">Temporibus laudantium</a></h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-                <div class="read-more"><a href="#"><i class="icofont-arrow-right"></i> Read More</a></div>
-              </div>
+                <h5 class="card-title"><a href="">Management Consulting (Mapping Phase)</a></h5>
+                <p class="card-text">Management consulting for project startup, investment, and
+development to resolve project definition, organizational development, and financial/business challenges
+before traditional construction services begin.</p>
+                </div>
             </div>
           </div>
           <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-left">
             <div class="card">
               <div class="card-img">
-                <img src="assets/img/services-2.jpg" alt="...">
+                <img src="<?php echo e(asset('public/assets/img/services-2.jpg')); ?>" alt="...">
               </div>
               <div class="card-body">
-                <h5 class="card-title"><a href="">Aperiores voluptates</a></h5>
-                <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
-                <div class="read-more"><a href="#"><i class="icofont-arrow-right"></i> Read More</a></div>
+                <h5 class="card-title"><a href="">Program Management (Conceptual and Preconstruction Phases)</a></h5>
+                <p class="card-text">Management of project conception,
+budget, timeline, risk, permitting, value engineering, IPDs, and bidding through the start of construction.</p>
               </div>
             </div>
 
@@ -55,24 +83,115 @@
           <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-right">
             <div class="card">
               <div class="card-img">
-                <img src="assets/img/services-3.jpg" alt="...">
+                <img src="<?php echo e(asset('public/assets/img/services-3.jpg')); ?>" alt="...">
               </div>
               <div class="card-body">
-                <h5 class="card-title"><a href="">Veritatis natus nisi</a></h5>
-                <p class="card-text">Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet</p>
-                <div class="read-more"><a href="#"><i class="icofont-arrow-right"></i> Read More</a></div>
+                <h5 class="card-title"><a href="">Project Management (Construction &amp; Control and Closing Phases)</a></h5>
+                <p class="card-text">Management of project
+communication, process controls, and execution to Owner satisfaction during construction and closing.</p>
+                </div>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-left">
+            <div class="card">
+              <div class="card-img">
+                <img src="<?php echo e(asset('public/assets/img/services-4.jpg')); ?>" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="">Full Construction Project Management (Program and Project Management)</a></h5>
+                <p class="card-text">Management of full suite of
+Management Consulting, Program Management, and Project Management Modules</p>
               </div>
             </div>
           </div>
           <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-left">
             <div class="card">
               <div class="card-img">
-                <img src="assets/img/services-4.jpg" alt="...">
+                <img src="<?php echo e(asset('public/assets/img/services-4.jpg')); ?>" alt="...">
               </div>
               <div class="card-body">
-                <h5 class="card-title"><a href="">Aliquam veritatis</a></h5>
-                <p class="card-text">Nostrum eum sed et autem dolorum perspiciatis. Magni porro quisquam laudantium voluptatem. In molestiae earum ab sit esse voluptatem. Eos ipsam cumque ipsum officiis qui nihil aut incidunt aut</p>
-                <div class="read-more"><a href="#"><i class="icofont-arrow-right"></i> Read More</a></div>
+                <h5 class="card-title"><a href="">Appraisals (Conceptual Phase)</a></h5>
+                <p class="card-text">Provides appraisals on existing real-estate assets such as buildings,
+roads, bridges, marinas, airports, and machinery; may include structural risk evaluations as required.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-left">
+            <div class="card">
+              <div class="card-img">
+                <img src="<?php echo e(asset('public/assets/img/services-4.jpg')); ?>" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="">Cost Estimating Management (Preconstruction Phase)</a></h5>
+                <p class="card-text">Provides detailed cost estimating based on
+design documents for future work; may include bid evaluations, review of contractor-cost breakdown, and
+change order estimates; often conducted alongside a Constructability Review.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-left">
+            <div class="card">
+              <div class="card-img">
+                <img src="<?php echo e(asset('public/assets/img/services-4.jpg')); ?>" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="">Constructability Review (Preconstruction Phase)</a></h5>
+                <p class="card-text">Provides a full review of design specifications, drawings, and construction schedule; identifies potential change order and ensures a competitive bidding process.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-left">
+            <div class="card">
+              <div class="card-img">
+                <img src="<?php echo e(asset('public/assets/img/services-4.jpg')); ?>" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="">Permitting & Approval Management (Preconstruction Phase)</a></h5>
+                <p class="card-text">Evaluates and determines project permitting and approval requirements tailored to project size and scope and aids in obtaining all required permits and approvals.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-left">
+            <div class="card">
+              <div class="card-img">
+                <img src="<?php echo e(asset('public/assets/img/services-4.jpg')); ?>" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="">Procurement and Supply Chain Consultation (Preconstruction and/or Construction & Control Phases)</a></h5>
+                <p class="card-text">Provides targeted cost management and scheduling of project materials, equipment systems, and services to maintain budget and schedule; includes identification and incorporation of long-lead items.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-left">
+            <div class="card">
+              <div class="card-img">
+                <img src="<?php echo e(asset('public/assets/img/services-4.jpg')); ?>" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="">Construction & Engineering Quality Control (Construction & Control Phase)</a></h5>
+                <p class="card-text">Provides project observations, design collaboration, Cost Estimating Management, Constructability Review, critical-path review, claims analysis, material testing and certification, value engineering, and submission review services.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-left">
+            <div class="card">
+              <div class="card-img">
+                <img src="<?php echo e(asset('public/assets/img/services-4.jpg')); ?>" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="">Troubled Project Turnaround (Construction & Control Phase)</a></h5>
+                <p class="card-text">Provides full project review to evaluate hotspots, scope, budget, and schedule; addresses critical needs, establishes new budget and schedule, mitigates and resolves claims, and implements strict controls.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-left">
+            <div class="card">
+              <div class="card-img">
+                <img src="<?php echo e(asset('public/assets/img/services-4.jpg')); ?>" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="">Facility Maintenance</a></h5>
+                <p class="card-text">Tailors facility-maintenance program to streamline maintenance operations in a standardized and cost-effective manner and to centralize date to view trends and to optimize organization-wide approach and resolution.</p>
               </div>
             </div>
           </div>

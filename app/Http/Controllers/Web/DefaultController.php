@@ -219,6 +219,16 @@ class DefaultController extends DataController
 		
 		return view("cvg.contact-us.index", $title)->with('result', $result); 
 	}
+
+	//myContactUs
+	public function testimonials(Request $request){
+		$title = array('pageTitle' => Lang::get("website.Contact Us"));
+		$result = array();			
+		$result['commonContent'] = $this->commonContent();
+		
+		return view("cvg.testimonials.index", $title)->with('result', $result); 
+	}
+	
 	
 	//processContactUs
 	public function processContactUs(Request $request){

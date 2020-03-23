@@ -20,7 +20,7 @@
           </li>
           <li><a href="<?php echo e(URL::to('services')); ?>">Services</a></li>
           <li><a href="<?php echo e(URL::to('Franchise-With-CVG')); ?>">Franchise With CVG</a></li>
-          <li><a href="<?php echo e(URL::to('Franchise-With-CVG')); ?>">Testimonials</a></li>
+          <li><a href="<?php echo e(URL::to('testimonials')); ?>">Testimonials</a></li>
           <li><a href="<?php echo e(URL::to('news')); ?>">News</a></li>
           <li><a href="<?php echo e(URL::to('contact-us')); ?>">Contact Us</a></li>
         </ul>

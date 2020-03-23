@@ -28,7 +28,7 @@
             	<input type="hidden"  name="category_id" value="<?php echo e(app('request')->input('category_id')); ?>">
                 <div class="row">
                 	 <div class="col-12 col-lg-3 spaceright-0">
-                     	 
+                     	<?php echo $__env->make('common.sidebar_news', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
                      </div>
                      <div class="col-12 col-lg-9">
                      	<div class="col-12 spaceright-0">

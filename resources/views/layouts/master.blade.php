@@ -30,6 +30,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <link href="{{asset('public/assets/css/animate.css')}}" rel="stylesheet">
       <!-- Template Main CSS File -->
       <link href="{{asset('public/assets/css/style.css')}}" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
       @yield('css')
 

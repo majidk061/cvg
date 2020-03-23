@@ -20,7 +20,7 @@
           </li>
           <li><a href="{{URL::to('services')}}">Services</a></li>
           <li><a href="{{URL::to('Franchise-With-CVG')}}">Franchise With CVG</a></li>
-          <li><a href="{{URL::to('Franchise-With-CVG')}}">Testimonials</a></li>
+          <li><a href="{{URL::to('testimonials')}}">Testimonials</a></li>
           <li><a href="{{URL::to('news')}}">News</a></li>
           <li><a href="{{URL::to('contact-us')}}">Contact Us</a></li>
         </ul>

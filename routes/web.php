@@ -468,6 +468,7 @@ Route::post('/language/', array(
 	Route::get('/Franchise-With-CVG', 'DefaultController@Franchise');
 	Route::get('/contact-us', 'DefaultController@ContactUs');
 	Route::post('/processContactUs', 'DefaultController@processContactUs');
+	Route::get('/testimonials', 'DefaultController@testimonials');
 
 	/*
 	|--------------------------------------------------------------------------
