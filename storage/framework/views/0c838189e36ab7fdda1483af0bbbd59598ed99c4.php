@@ -12,7 +12,7 @@
   <div class="container-fluid">
     <div class="container">
        <div class="bradcram bounceInLeft animated">
-         Home / Franchise With CVG
+        <a href="<?php echo e(URL::to('/')); ?>"><?php echo app('translator')->getFromJson('website.Home'); ?></a> / Franchise With CVG
        </div>
      </div>
   </div>

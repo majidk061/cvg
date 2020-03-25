@@ -46,7 +46,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     @include('layouts.footer')
       
     <!-- ./wrapper -->
-    @yield('javascript')
+   
 
     <!-- jQuery -->
 
@@ -104,6 +104,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
             @endif
 </script>
 
-      
+  @yield('javascript')     
 </body>
 </html>

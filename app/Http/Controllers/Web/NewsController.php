@@ -1,6 +1,6 @@
 <?php
 /*
-Project Name: IonicEcommerce
+Project Name: IonicEcommerce 
 Project URI: http://ionicecommerce.com
 Author: VectorCoder Team
 Author URI: http://vectorcoder.com/
@@ -116,7 +116,8 @@ class NewsController extends DataController
 			$result['limit'] = $limit;
 		}			
 		$result['categories_name'] = $categories_name;
-		return view("themes.themeone.views.news", $title)->with('result', $result);
+		// dd($result);
+		return view("cvg.news.index", $title)->with('result', $result);
 	
 	}
 	
@@ -155,7 +156,7 @@ class NewsController extends DataController
 		$result['limit'] = $limit;
 		$result['news'] = $news;
 		
-		return view("loadMoreNews")->with('result', $result);
+		return view("cvg.loadmore-news.index")->with('result', $result);
 		
 		
 	}
@@ -254,7 +255,7 @@ class NewsController extends DataController
 					
 		$result['news'] = $news;					
 		
-		return view("news-detail", $title)->with('result', $result); 
+		return view("cvg.news-details.index", $title)->with('result', $result); 
 	}
 	
 }

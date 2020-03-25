@@ -12,7 +12,7 @@
   <div class="container-fluid">
     <div class="container">
        <div class="bradcram bounceInLeft animated">
-         Home / Franchise With CVG
+        <a href="{{ URL::to('/')}}">@lang('website.Home')</a> / Franchise With CVG
        </div>
      </div>
   </div>

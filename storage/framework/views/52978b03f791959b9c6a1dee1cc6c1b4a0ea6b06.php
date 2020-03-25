@@ -12,7 +12,7 @@
   <div class="container-fluid">
     <div class="container">
        <div class="bradcram bounceInLeft animated">
-         Home / Contact Us
+         <a href="<?php echo e(URL::to('/')); ?>"><?php echo app('translator')->getFromJson('website.Home'); ?></a> / Contact Us
        </div>
      </div>
   </div>
@@ -59,32 +59,27 @@ email.</p>
           </div>
 
           <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form" data-aos="fade-up">
-              <div class="form-row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                  <div class="validate"></div>
-                </div>
-                <div class="col-md-6 form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                  <div class="validate"></div>
-                </div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                <div class="validate"></div>
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                <div class="validate"></div>
-              </div>
-              <div class="mb-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+            <form name="signup" role="form" data-aos="fade-up" class="form-validate " enctype="multipart/form-data" action="<?php echo e(URL::to('/processContactUs')); ?>" method="post">
+                      <div class="form-group">
+                          <label for="firstName"><?php echo app('translator')->getFromJson('website.Full Name'); ?></label>
+                          <input type="text" class="form-control field-validate" id="name" name="name">
+            <span class="help-block error-content" hidden><?php echo app('translator')->getFromJson('website.Please enter your name'); ?></span>
+                      </div>
+                      <div class="form-group">
+                          <label for="inputEmail4" class="col-form-label"><?php echo app('translator')->getFromJson('website.Email'); ?></label>
+                          <input type="email" class="form-control email-validate" id="inputEmail4" name="email">
+            <span class="help-block error-content" hidden><?php echo app('translator')->getFromJson('website.Please enter your valid email address'); ?></span>
+                      </div>
+                      <div class="form-group">
+                          <label for="subject" class="col-form-label"><?php echo app('translator')->getFromJson('website.Message'); ?></label>
+                          <textarea type="text" class="form-control field-validate" id="message" rows="5" name="message"></textarea>
+            <span class="help-block error-content" hidden><?php echo app('translator')->getFromJson('website.Please enter your message'); ?></span>
+                      </div>
+                      <div class="button">
+                          <button type="submit" class="btn btn-dark"><?php echo app('translator')->getFromJson('website.Send'); ?></button>
+                      </div>
             </form>
+             
           </div>
 
         </div>

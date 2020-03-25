@@ -1289,6 +1289,23 @@ section {
     animation-duration: 1s;
     animation-fill-mode: both;
 }
+.animated-3s{
+    animation-duration: 7s;
+    animation-fill-mode: both;
+}
+
 .bounceInLeft {
     animation-name: bounceInLeft;
 }
+.bounceInLeft {
+    animation-name: bounceInRight;
+}
+.bounceInUp {
+    animation-name: bounceInUp;
+}
+.bounceIn{
+    animation-name: bounceIn;
+}
+.jackInTheBox{
+  animation-name:jackInTheBox
+ }

@@ -98,7 +98,7 @@
   <div class="container-fluid">
     <div class="container">
        <div class="bradcram bounceInLeft animated">
-         Home / Testimonials
+         <a href="{{ URL::to('/')}}">@lang('website.Home')</a> / Testimonials
        </div>
      </div>
   </div>

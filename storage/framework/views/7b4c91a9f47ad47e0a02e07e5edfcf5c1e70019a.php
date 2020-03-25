@@ -46,7 +46,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <?php echo $__env->make('layouts.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
       
     <!-- ./wrapper -->
-    <?php echo $__env->yieldContent('javascript'); ?>
+   
 
     <!-- jQuery -->
 
@@ -104,6 +104,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <?php endif; ?>
 </script>
 
-      
+  <?php echo $__env->yieldContent('javascript'); ?>     
 </body>
 </html>

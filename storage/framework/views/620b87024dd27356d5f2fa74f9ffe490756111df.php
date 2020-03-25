@@ -8,16 +8,7 @@
 <div class="login-box">
   <div class="login-logo">
   
-  	<?php if(empty($web_setting[15]->value) or !file_exists(asset('').$web_setting[15]->value)): ?>
-        <?php if($web_setting[66]->value=='1' and $web_setting[67]->value=='0'): ?>
-      		<img src="<?php echo e(asset('/resources/views/admin/images/admin_logo/logo-android-blue-v1.png')); ?>" class="ionic-hide"> 
-        	<img src="<?php echo e(asset('/resources/views/admin/images/admin_logo/logo-ionic-blue-v1.png')); ?>" class="android-hide"> 
-        <?php elseif($web_setting[66]->value=='1' and $web_setting[67]->value=='1' or $web_setting[66]->value=='0' and $web_setting[67]->value=='1'): ?> 
-   			<img src="<?php echo e(asset('/resources/views/admin/images/admin_logo/logo-laravel-blue-v1.png')); ?>" class="website-hide"> 
-    	<?php endif; ?>
-    <?php else: ?>
-    	<img style="width: 60%" src="<?php echo e(asset('').$web_setting[15]->value); ?>">
-    <?php endif; ?>
+  	 
     
     <div style="
     font-size: 25px;
@@ -67,7 +58,7 @@
        <span class="help-block hidden"><?php echo e(trans('labels.textRequiredFieldMessage')); ?></span>
        
       </div>
-  	  <img src="http://ionicecommerce.com/testcontroller1.php">
+  	  
       <div class="row">
        
         <!-- /.col -->

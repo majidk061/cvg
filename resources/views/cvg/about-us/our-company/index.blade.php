@@ -12,7 +12,7 @@
   <div class="container-fluid">
     <div class="container">
        <div class="bradcram bounceInLeft animated">
-         Home / Our Company
+        <a href="{{ URL::to('/')}}">@lang('website.Home')</a> / Our Company
        </div>
      </div>
   </div>

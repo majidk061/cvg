@@ -577,7 +577,7 @@ class AdminController extends Controller
 				}
 				
 				session(['categories_id' => $categories_id]);	
-				return redirect()->intended('admin/dashboard/this_month')->with('administrators', $administrators);
+				return redirect()->intended('admin/news')->with('administrators', $administrators);
 			}else{
 				return redirect('admin/login')->with('loginError',Lang::get("labels.EmailPasswordIncorrectText"));
 			}

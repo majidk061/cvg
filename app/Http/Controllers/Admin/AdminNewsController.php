@@ -149,9 +149,7 @@ class AdminNewsController extends Controller
 				]);
 		
 		
-		//notify users	
-		$myVar = new AdminAlertController();
-		$alertSetting = $myVar->newsNotification($news_id);
+		 
 		
 		$message = Lang::get("labels.Newshasbeenaddedsuccessfully");				
 		return redirect()->back()->withErrors([$message]);

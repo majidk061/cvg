@@ -241,11 +241,11 @@ class DefaultController extends DataController
 		
 		$data = array('name'=>$name, 'email'=>$email, 'subject'=>$subject, 'message'=>$message, 'adminEmail'=>$result['commonContent']['setting'][3]->value);
 		
-		Mail::send('/mail/contactUs', ['data' => $data], function($m) use ($data){
-			$m->to($data['adminEmail'])->subject(Lang::get("website.contact us title"))->getSwiftMessage()
-			->getHeaders()
-			->addTextHeader('x-mailgun-native-send', 'true');	
-		});
+		// Mail::send('/mail/contactUs', ['data' => $data], function($m) use ($data){
+		// 	$m->to($data['adminEmail'])->subject(Lang::get("website.contact us title"))->getSwiftMessage()
+		// 	->getHeaders()
+		// 	->addTextHeader('x-mailgun-native-send', 'true');	
+		// });
 		
 		return redirect()->back()->with('success', Lang::get("website.contact us message"));
 	}
