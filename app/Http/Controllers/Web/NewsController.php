@@ -116,7 +116,6 @@ class NewsController extends DataController
 			$result['limit'] = $limit;
 		}			
 		$result['categories_name'] = $categories_name;
-		// dd($result);
 		return view("cvg.news.index", $title)->with('result', $result);
 	
 	}

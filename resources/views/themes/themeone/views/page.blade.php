@@ -1,7 +1,7 @@
 @extends('layout')
 @section('content')
 <section class="site-content">
-	<div class="container">
+	<div class="container"> 
   		<div class="breadcum-area">
             <div class="breadcum-inner">
                 <h3><?=$result['pages'][0]->name?></h3>

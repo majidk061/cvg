@@ -103,7 +103,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
              });
             @endif
 </script>
+  
 
+<script type="text/javascript">
+  function changeLanguage(locale){
+    $.ajax({     
+      url: '{{ URL::to("/language")}}',     
+      type: "POST",     
+      data: '&locale='+locale,
+      success: function (res) { 
+        window.location.reload(true);   
+      },      
+    }); 
+    
+  };
+</script>  
   @yield('javascript')     
 </body>
 </html>

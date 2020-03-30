@@ -46,8 +46,6 @@
                     <tr>
                       <th>{{ trans('labels.ID') }}</th>
                       <th>{{ trans('labels.Name') }}</th>
-                      <th>{{ trans('labels.Image') }}</th>
-                      <th>{{ trans('labels.Icon') }}</th>
                       <th>{{ trans('labels.MainCategory') }}</th>
                       <th>{{ trans('labels.AddedLastModifiedDate') }}</th>
                       <th>{{ trans('labels.Action') }}</th>
@@ -60,8 +58,6 @@
                         <tr>
                         	<td>{{ $categories->subId }}</td>
                             <td>{{ $categories->subCategoryName }}</td>
-                            <td><img src="{{asset('').'/'.$categories->image}}" alt="" width=" 100px"></td>
-                            <td><img src="{{asset('').'/'.$categories->icon}}" alt="" width=" 100px"></td>
                             <td>{{ $categories->mainCategoryName }}</td>
                             <td>
                             	<strong>{{ trans('labels.AddedDate') }}: </strong> {{ $categories->date_added }}<br>

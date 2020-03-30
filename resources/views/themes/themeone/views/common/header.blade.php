@@ -1,7 +1,7 @@
 <header id="header-area" class="header-area bg-primary">
 	<div class="header-mini">
     	<div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center"> 
                 <div class="col-12">
                 
                 	<nav id="navbar_0" class="navbar navbar-expand-md navbar-dark navbar-0 p-0">

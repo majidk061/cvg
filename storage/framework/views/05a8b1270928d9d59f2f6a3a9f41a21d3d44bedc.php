@@ -1,5 +1,28 @@
 <!-- ======= Header ======= -->
+ <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 d-flex">
+
+          <div class="navbar-brand">
+              <select name="change_language" onchange="changeLanguage(this.value)" id="change_language" style="font-size: 10px;" class="change-language form-control">
+              <?php $__currentLoopData = $languages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $languages_data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>                               
+                  <option value="<?php echo e($languages_data->code); ?>" data-class="<?php echo e($languages_data->code); ?>" data-style="background-image: url(<?php echo e(asset('').$languages_data->image); ?>);" <?php if(session('locale')==$languages_data->code): ?> selected <?php endif; ?>><?php echo e($languages_data->name); ?></option>
+              <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?> 
+              </select>
+          </div>
+          <div class="social-links header-icon pull-right">
+            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
   <header id="header">
+
     <div class="container d-flex"> 
 
       <div class="logo mr-auto">

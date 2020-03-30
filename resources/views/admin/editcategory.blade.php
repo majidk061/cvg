@@ -74,25 +74,7 @@
                                   </div>
                                 </div>
                                 
-                                <div class="form-group">
-                                  <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.Image') }}</label>
-                                  <div class="col-sm-10 col-md-4">
-                                    {!! Form::file('newImage', array('id'=>'newImage')) !!}<br>
-                
-                                    <img src="{{asset('').$result['editCategory'][0]->image}}" alt="" width=" 100px">
-                                  <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">{{ trans('labels.CategoryImageText') }}</span>
-                                  
-                                  </div>
-                                </div>
-                                
-                                <div class="form-group">
-                                  <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.Icon') }}</label>
-                                  <div class="col-sm-10 col-md-4">
-                                    {!! Form::file('newIcon', array('id'=>'newIcon')) !!}
-                                  <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">{{ trans('labels.CategoryIconText') }}</span><br>
-                                    <img src="{{asset('').$result['editCategory'][0]->icon}}" alt="" width=" 100px">
-                                  </div>
-                                </div>
+                                 
                                 
                               <!-- /.box-body -->
                               <div class="box-footer text-center">

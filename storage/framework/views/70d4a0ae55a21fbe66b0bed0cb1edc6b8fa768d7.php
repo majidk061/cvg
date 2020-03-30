@@ -38,25 +38,16 @@
     <section id="faq" class="faq section-bg">
       <div class="container">
         <div class="section-title">
-          <h2 data-aos="fade-in">Construction Management</h2>
+          <h2 data-aos="fade-in"><?=$result['pages'][0]->name?></h2>
            
         </div>
 
         <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up">
-          <div class="col-lg-12">
-            <p>
-              CVG Construction Management is a global construction project and program management firm specializing in achieving project/program scopes on budget, on time, and in a transparent and sustainable manner. CVG makes projects happen.
-            </p>
+          <div class="col-lg-12 text-justify">
+            <?=stripslashes($result['pages'][0]->description)?> 
           </div>
         </div><!-- End F.A.Q Item-->
-
-        <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-12">
-            <p data-aos="fade-in">
-              CVG also offers entrepreneurs the opportunity to run their own local firm and to drive impact in their communities.  For more information, please see our “Franchise with CVG” page.
-            </p>
-          </div>
-        </div><!-- End F.A.Q Item-->
+ 
       </div>
     </section><!-- End Frequently Asked Questions Section -->
   </main><!-- End #main -->

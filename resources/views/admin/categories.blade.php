@@ -48,8 +48,6 @@
                     <tr>
                       <th>{{ trans('labels.ID') }}</th>
                       <th>{{ trans('labels.Name') }}</th>
-                      <th>{{ trans('labels.Image') }}</th>
-                      <th>{{ trans('labels.Icon') }}</th>
                       <th>{{ trans('labels.AddedLastModifiedDate') }}</th>
                       <th>{{ trans('labels.Action') }}</th>
                     </tr>
@@ -60,8 +58,6 @@
                         <tr>
                             <td>{{ $category->id }}</td>
                             <td>{{ $category->name }}</td>
-                            <td><img src="{{asset('').'/'.$category->image}}" alt="" width=" 100px"></td>
-                            <td><img src="{{asset('').'/'.$category->icon}}" alt="" width=" 100px"></td>
                             <td><strong>{{ trans('labels.AddedDate') }}: </strong> {{ $category->date_added }}<br>
                             <strong>{{ trans('labels.ModifiedDate') }}: </strong>{{ $category->last_modified }}  </td>
                             <td><a data-toggle="tooltip" data-placement="bottom" title="{{ trans('labels.Edit') }}" href="editcategory/{{ $category->id }}" class="badge bg-light-blue"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> 

@@ -433,7 +433,7 @@ Route::group(['prefix' => 'admin'], function () {
 
 /********* setting themes dynamically *********/
 // default setting
- 
+  
 
 Route::group(['namespace' => 'Web'], function () {	
 	
@@ -474,7 +474,7 @@ Route::post('/language/', array(
 	|--------------------------------------------------------------------------
 	| End construction website Controller Routes
 	|--------------------------------------------------------------------------
-	|
+	| 
 	| This section contains all Routes of construction website. 
 	| 
 	|

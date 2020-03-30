@@ -69,22 +69,7 @@
                                 </div>
                               @endforeach
                               
-                                <div class="form-group">
-                                  <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.Image') }}</label>
-                                  <div class="col-sm-10 col-md-4">
-                                    {!! Form::file('newImage', array('id'=>'newImage')) !!}
-                                  <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
-                                  {{ trans('labels.UploadSubCategoryImage') }}</span>
-                                  </div>
-                                </div>
-                                <div class="form-group">
-                                  <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.Icon') }}
-                                  </label>
-                                  <div class="col-sm-10 col-md-4">
-                                    {!! Form::file('newIcon', array('id'=>'newIcon')) !!}
-                                    <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">{{ trans('labels.UploadSubCategoryIcon') }}</span>
-                                  </div>
-                                </div>
+                                 
                               <!-- /.box-body -->
                               <div class="box-footer text-center">
                                 <button type="submit" class="btn btn-primary">{{ trans('labels.AddCategory') }}</button>

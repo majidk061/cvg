@@ -1309,3 +1309,8 @@ section {
 .jackInTheBox{
   animation-name:jackInTheBox
  }
+.header-icon{
+    text-align: center;
+    font-size: 22px;
+    border-left: 1px solid #c1baba;
+}
