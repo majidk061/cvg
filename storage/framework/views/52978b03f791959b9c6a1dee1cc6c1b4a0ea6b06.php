@@ -4,7 +4,15 @@
  
   <section id="hero">
      <div class="row">
-       <img src="https://ricinzconstruction.co.za/wp-content/uploads/2018/02/about-us-banner.jpg" class="static-img">
+       <?php if(count($result['commonContent']['homeBanners'])>0): ?>
+            <?php $__currentLoopData = ($result['commonContent']['homeBanners']); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $homeBanners): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <?php if($homeBanners->type=='Contact US Banner'): ?>
+                  <a title="Banner Image" href="<?php echo e($homeBanners->banners_url); ?>">
+                    <img src="<?php echo e(asset('').$homeBanners->banners_image); ?>" class="static-img" style="width: 1381px">
+                  </a>
+                <?php endif; ?>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+        <?php endif; ?>
      </div>
      
   </section><!-- End Hero -->

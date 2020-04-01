@@ -31,13 +31,13 @@
             <div class="row">
               <div class="col-xs-12">
               		  @if (count($errors) > 0)
-                          @if($errors->any())
-                            <div class="alert alert-success alert-dismissible" role="alert">
-                              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                              {{$errors->first()}}
-                            </div>
-                          @endif
-                      @endif
+                        @if($errors->any())
+                          <div class="alert alert-success alert-dismissible" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            {{$errors->first()}}
+                          </div>
+                        @endif
+                    @endif
 
               </div>
             </div>
@@ -59,8 +59,8 @@
                     @foreach ($result['banners'] as $key=>$banners)
                         <tr>
                             <td>{{ $banners->banners_id }}</td>
-                      		<td>{{ $banners->name }}</td>
-                            <td>{{ trans('labels.Side Banner') }} {{ $banners->type }}</td>
+                      		  <td>{{ $banners->name }}</td>
+                            <td>{{ $banners->type }} {{ trans('labels.Side Banner') }} </td>
                             
                             <td><img src="{{asset('').'/'.$banners->banners_image}}" alt="" width=" 100px"></td>
                             <td><strong>{{ trans('labels.AddedDate') }}: </strong> {{ date('d M, Y', strtotime($banners->date_added)) }}<br>

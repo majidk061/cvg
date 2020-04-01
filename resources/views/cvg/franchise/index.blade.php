@@ -4,53 +4,34 @@
  
   <section id="hero">
      <div class="row">
-       <img src="https://wallpaperstock.net/architecture_wallpapers_23828_1920x1080.jpg" class="static-img">
+       @if(count($result['commonContent']['homeBanners'])>0)
+            @foreach(($result['commonContent']['homeBanners']) as $homeBanners)
+                @if($homeBanners->type=='Franchise Banner')
+                  <a title="Banner Image" href="{{ $homeBanners->banners_url}}">
+                    <img src="{{asset('').$homeBanners->banners_image}}" class="static-img" style="width: 1381px">
+                  </a>
+                @endif
+            @endforeach
+        @endif
      </div>
      
   </section><!-- End Hero -->
-
-  <div class="container-fluid">
-    <div class="container">
-       <div class="bradcram bounceInLeft animated">
-        <a href="{{ URL::to('/')}}">@lang('website.Home')</a> / Franchise With CVG
-       </div>
-     </div>
-  </div>
+ 
   <main id="main">
     <!-- ======= Frequently Asked Questions Section ======= -->
     <section id="faq" class="faq section-bg">
       <div class="container">
         <div class="section-title">
-          <h2 data-aos="fade-in">Franchise With CVG</h2>
+          <h2 data-aos="fade-in"><?=$result['pages'][0]->name?></h2>
            
         </div>
 
-        <div class="row  d-flex align-items-stretch" data-aos="fade-up">
-          <div class="col-lg-12">
-            <p class="text-justify">
-              CVG is dedicated to expanding its reach and services with like-minded firms and individuals through
-franchising opportunities.
-            </p>
+        <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up">
+          <div class="col-lg-12 text-justify">
+            <?=stripslashes($result['pages'][0]->description)?> 
           </div>
         </div><!-- End F.A.Q Item-->
-
-        <div class="row   d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-12">
-            <p data-aos="fade-in" class="text-justify">
-             CVG values integrity, honesty, responsibility, respect, diversity, teamwork, community, and the
-environment. We support the growth of our Franchises through hands-on support to empower our
-Owners to grow their businesses and to impact their communities in meaningful and sustainable ways.
-            </p>
-          </div>
-        </div><!-- End F.A.Q Item-->
-        <div class="row   d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-12">
-            <p data-aos="fade-in" class="text-justify">
-             If interested in growing with CVG, please contact us for more information at
-<a href="franchise@cvgmanagement.com">franchise@cvgmanagement.com</a>. We are CVG, and you are us.
-            </p>
-          </div>
-        </div><!-- End F.A.Q Item-->
+ 
       </div>
     </section><!-- End Frequently Asked Questions Section -->
   </main><!-- End #main -->

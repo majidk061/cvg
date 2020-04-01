@@ -1,26 +1,28 @@
 @extends('layouts.master') 
 @section('css')
 <style type="text/css">
- 
-.carousel {
-  width: 650px;
+  
+.col-center {
   margin: 0 auto;
-  padding-bottom: 50px;
+  float: none !important;
+}
+.carousel {
+  margin: 50px auto;
+  padding: 0 70px;
 }
 .carousel .item {
   color: #999;
   font-size: 14px;
     text-align: center;
   overflow: hidden;
-    min-height: 340px;
+    min-height: 290px;
 }
-.carousel .item a {
-  color: #eb7245;
-}
-.carousel .img-box {
-  width: 145px;
-  height: 145px;
+.carousel .item .img-box {
+  width: 135px;
+  height: 135px;
   margin: 0 auto;
+  padding: 5px;
+  border: 1px solid #ddd;
   border-radius: 50%;
 }
 .carousel .img-box img {
@@ -29,59 +31,48 @@
   display: block;
   border-radius: 50%;
 }
-.carousel .testimonial {  
+.carousel .testimonial {
   padding: 30px 0 10px;
 }
 .carousel .overview { 
-  text-align: center;
-  padding-bottom: 5px;
+  font-style: italic;
 }
 .carousel .overview b {
-  color: #333;
-  font-size: 15px;
   text-transform: uppercase;
-  display: block; 
-  padding-bottom: 5px;
-}
-.carousel .star-rating i {
-  font-size: 18px;
-  color: #f26b36;
+  color: #7AA641;
 }
 .carousel .carousel-control {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-    background: #999;
-    text-shadow: none;
-  top: 4px;
+  width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    top: 50%;
+  background: none;
 }
 .carousel-control i {
-  font-size: 20px;
-  margin-right: 2px;
-}
-.carousel-control.left {
-  left: auto;
-  right: 40px;
-}
-.carousel-control.right i {
-  margin-right: -2px;
+    font-size: 68px;
+  line-height: 42px;
+    position: absolute;
+    display: inline-block;
+  color: rgba(0, 0, 0, 0.8);
+    text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
 }
 .carousel .carousel-indicators {
-  bottom: 15px;
+  bottom: -40px;
 }
 .carousel-indicators li, .carousel-indicators li.active {
-  width: 11px;
-  height: 11px;
-  margin: 1px 5px;
+  width: 10px;
+  height: 10px;
+  margin: 1px 3px;
   border-radius: 50%;
 }
 .carousel-indicators li { 
-  background: #e2e2e2;
+  background: #999;
   border-color: transparent;
+  box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
 }
-.carousel-indicators li.active {
-  border: none;
-  background: #888;   
+.carousel-indicators li.active {  
+  background: #555;   
+  box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
 }
 </style>
 @endsection('css')
@@ -90,9 +81,16 @@
  
   <section id="hero">
      <div class="row">
-       <img src="https://wallpaperstock.net/architecture_wallpapers_23828_1920x1080.jpg" class="static-img">
+       @if(count($result['commonContent']['homeBanners'])>0)
+            @foreach(($result['commonContent']['homeBanners']) as $homeBanners)
+                @if($homeBanners->type=='Testimonials Banner')
+                  <a title="Banner Image" href="{{ $homeBanners->banners_url}}">
+                    <img src="{{asset('').$homeBanners->banners_image}}" class="static-img" style="width: 1381px">
+                  </a>
+                @endif
+            @endforeach
+        @endif
      </div>
-     
   </section><!-- End Hero -->
 
   <div class="container-fluid">

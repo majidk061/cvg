@@ -1,7 +1,7 @@
-<!-- ======= Header ======= -->
- <div class="container-fluid">
+<!-- ======= Header =======  -->
+ <div class="container-fluid border-bottom">
       <div class="row">
-        <div class="col-md-12 d-flex">
+        <div class="col-md-12">
 
           <div class="navbar-brand">
               <select name="change_language" onchange="changeLanguage(this.value)" id="change_language" style="font-size: 10px;" class="change-language form-control">

@@ -55,8 +55,31 @@
           </ul>
         </li>
          @endif
+         @if(session('news_view')==1  or auth()->guard('admin')->user()->adminType=='1')
+        <li class="treeview {{ Request::is('admin/newscategories') ? 'active' : '' }} {{ Request::is('admin/addnewscategory') ? 'active' : '' }} {{ Request::is('admin/editnewscategory/*') ? 'active' : '' }} {{ Request::is('admin/news') ? 'active' : '' }}  {{ Request::is('admin/addsubnews') ? 'active' : '' }}  {{ Request::is('admin/editsubnews/*') ? 'active' : '' }}">
+          <a href="#">
+            <i class="fa fa-database" aria-hidden="true"></i>
+<span>{{ trans('labels.Service') }}</span> <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
             
+            <li class="{{ Request::is('admin/service') ? 'active' : '' }}  {{ Request::is('admin/addservice') ? 'active' : '' }}  {{ Request::is('admin/editservice/*') ? 'active' : '' }}"><a href="{{ URL::to('admin/service')}}"><i class="fa fa-circle-o"></i> {{ trans('labels.Service') }}</a></li>
+          </ul>
+        </li>
+         @endif   
          
+        @if(session('news_view')==1  or auth()->guard('admin')->user()->adminType=='1')
+        <li class="treeview {{ Request::is('admin/newstestimonial') ? 'active' : '' }} {{ Request::is('admin/addstestimonial') ? 'active' : '' }} {{ Request::is('admin/edittestimonial/*') ? 'active' : '' }} {{ Request::is('admin/testimonial') ? 'active' : '' }}  {{ Request::is('admin/addtestimonial') ? 'active' : '' }}  {{ Request::is('admin/edittestimonial/*') ? 'active' : '' }}">
+          <a href="#">
+            <i class="fa fa-database" aria-hidden="true"></i>
+<span>{{ trans('labels.Testimonials') }}</span> <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            
+            <li class="{{ Request::is('admin/testimonial') ? 'active' : '' }}  {{ Request::is('admin/addtestimonial') ? 'active' : '' }}  {{ Request::is('admin/edittestimonial/*') ? 'active' : '' }}"><a href="{{ URL::to('admin/testimonial')}}"><i class="fa fa-circle-o"></i> {{ trans('labels.Testimonials') }}</a></li>
+          </ul>
+        </li>
+         @endif  
          
         @if(session('website_setting_view')==1 or auth()->guard('admin')->user()->adminType=='1')
         

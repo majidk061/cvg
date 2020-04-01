@@ -31,14 +31,14 @@
             <div class="row">
               <div class="col-xs-12">
               		  <?php if(count($errors) > 0): ?>
-                          <?php if($errors->any()): ?>
-                            <div class="alert alert-success alert-dismissible" role="alert">
-                              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                              <?php echo e($errors->first()); ?>
+                        <?php if($errors->any()): ?>
+                          <div class="alert alert-success alert-dismissible" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <?php echo e($errors->first()); ?>
 
-                            </div>
-                          <?php endif; ?>
-                      <?php endif; ?>
+                          </div>
+                        <?php endif; ?>
+                    <?php endif; ?>
 
               </div>
             </div>
@@ -60,8 +60,8 @@
                     <?php $__currentLoopData = $result['banners']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key=>$banners): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <tr>
                             <td><?php echo e($banners->banners_id); ?></td>
-                      		<td><?php echo e($banners->name); ?></td>
-                            <td><?php echo e(trans('labels.Side Banner')); ?> <?php echo e($banners->type); ?></td>
+                      		  <td><?php echo e($banners->name); ?></td>
+                            <td><?php echo e($banners->type); ?> <?php echo e(trans('labels.Side Banner')); ?> </td>
                             
                             <td><img src="<?php echo e(asset('').'/'.$banners->banners_image); ?>" alt="" width=" 100px"></td>
                             <td><strong><?php echo e(trans('labels.AddedDate')); ?>: </strong> <?php echo e(date('d M, Y', strtotime($banners->date_added))); ?><br>

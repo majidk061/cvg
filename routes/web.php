@@ -363,6 +363,22 @@ Route::group(['prefix' => 'admin'], function () {
 			Route::post('/updatenews', 'AdminNewsController@updatenews');
 			Route::post('/deletenews', 'AdminNewsController@deletenews');
 
+			//service 
+			Route::get('/service', 'ServiceController@service');
+			Route::get('/addservice', 'ServiceController@addsservice');
+			Route::post('/addservice', 'ServiceController@addservice');
+			Route::get('/editservice/{id}', 'ServiceController@editservice');
+			Route::post('/updateservice', 'ServiceController@updateservice');
+			Route::post('/deleteservice', 'ServiceController@deleteservice');
+
+			//testimonial 
+			Route::get('/testimonial', 'TestimonialController@testimonial');
+			Route::get('/addtestimonial', 'TestimonialController@addstestimonial');
+			Route::post('/addtestimonial', 'TestimonialController@addtestimonial');
+			Route::get('/edittestimonial/{id}', 'TestimonialController@edittestimonial');
+			Route::post('/updatetestimonial', 'TestimonialController@updatetestimonial');
+			Route::post('/deletetestimonial', 'TestimonialController@deletetestimonial');
+
 			//app pages controller
 			Route::get('/pages', 'AdminPagesController@pages');
 			Route::get('/addpage', 'AdminPagesController@addpage');

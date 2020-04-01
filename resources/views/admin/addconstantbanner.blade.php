@@ -52,7 +52,7 @@
                             	<div class="form-group">
                                   <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.Language') }}</label>
                                   <div class="col-sm-10 col-md-4">
-                                      <select class="form-control" name="languages_id">
+                                      <select class="form-control" name="languages_id"> 
                                           @foreach($result['languages'] as $language)
                                               <option value="{{$language->languages_id}}">{{ $language->name }}</option>
                                           @endforeach
@@ -66,13 +66,13 @@
                                   <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.Side Banner') }}</label>
                                   <div class="col-sm-10 col-md-4">
                                       <select class="form-control" name="type">
-                                          <option value="1">{{ trans('labels.Side Banner 1') }}</option>
-                                          <option value="2">{{ trans('labels.Side Banner 2') }}</option>
-                                          <option value="3">{{ trans('labels.Side Banner 3') }}</option>
-                                          <option value="4">{{ trans('labels.Side Banner 4') }}</option>
-                                          <option value="5">{{ trans('labels.Side Banner 5') }}</option>
-                                          <option value="6">{{ trans('labels.Side Banner 6') }}</option>
-                                          <option value="7">{{ trans('labels.Side Banner 7') }}</option>
+                                          <option value="{{ trans('labels.Side Banner 1') }}">{{ trans('labels.Side Banner 1') }}</option>
+                                          <option value="{{ trans('labels.Side Banner 2') }}">{{ trans('labels.Side Banner 2') }}</option>
+                                          <option value="{{ trans('labels.Side Banner 3') }}">{{ trans('labels.Side Banner 3') }}</option>
+                                          <option value="{{ trans('labels.Side Banner 4') }}">{{ trans('labels.Side Banner 4') }}</option>
+                                          <option value="{{ trans('labels.Side Banner 5') }}">{{ trans('labels.Side Banner 5') }}</option>
+                                          <option value="{{ trans('labels.Side Banner 6') }}">{{ trans('labels.Side Banner 6') }}</option>
+                                          <option value="{{ trans('labels.Side Banner 7') }}">{{ trans('labels.Side Banner 7') }}</option>
                                       </select>
                                       <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
                                       {{ trans('labels.AddBannerText') }}</span>

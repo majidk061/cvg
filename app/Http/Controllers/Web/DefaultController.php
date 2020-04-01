@@ -82,7 +82,27 @@ class DefaultController extends DataController
 					->where([['pages.status','1'],['type',2],['pages_description.language_id',session('language_id')],['pages.slug','Home']])->get();
 		
 		$title = array('pageTitle' => $pages[0]->name);
-		$result['pages'] = $pages;			
+		$service_pages = DB::table('pages')
+					->leftJoin('pages_description','pages_description.page_id','=','pages.page_id')
+					->where([['pages.status','1'],['type',2],['pages_description.language_id',session('language_id')],['pages.slug','SERVICES']])->get();
+		$service = DB::table('service')
+					->where('service.language_id',session('language_id'))->paginate(3);	
+		$contact_pages = DB::table('pages')
+				->leftJoin('pages_description','pages_description.page_id','=','pages.page_id')
+				->where([['pages.status','1'],['type',2],['pages_description.language_id',session('language_id')],['pages.slug','CONTACT-US']])->get();
+		$our_company_pages = DB::table('pages')
+					->leftJoin('pages_description','pages_description.page_id','=','pages.page_id')
+					->where([['pages.status','1'],['type',2],['pages_description.language_id',session('language_id')],['pages.slug','OUR-COMPANY']])->get();		
+		$frenchise_pages = DB::table('pages')
+					->leftJoin('pages_description','pages_description.page_id','=','pages.page_id')
+					->where([['pages.status','1'],['type',2],['pages_description.language_id',session('language_id')],['pages.slug','FRANCHISE-WITH-CVG']])->get();
+
+		$result['pages'] = $pages;	
+		$result['service_pages'] = $service_pages;	
+		$result['service'] = $service;	
+		$result['contact_pages'] = $contact_pages;	
+		$result['our_company_pages'] = $our_company_pages;		
+		$result['frenchise_pages'] = $frenchise_pages;	
 		 
 		
 		return view("cvg.home.index", $title)->with('result', $result); 
@@ -94,6 +114,13 @@ class DefaultController extends DataController
 		$title = array('pageTitle' => Lang::get("website.Contact Us"));
 		$result = array();			
 		$result['commonContent'] = $this->commonContent();
+
+		$pages = DB::table('pages')
+					->leftJoin('pages_description','pages_description.page_id','=','pages.page_id')
+					->where([['pages.status','1'],['type',2],['pages_description.language_id',session('language_id')],['pages.slug','OUR-COMPANY']])->get();
+		
+		$title = array('pageTitle' => $pages[0]->name);
+		$result['pages'] = $pages;		
 		
 		return view("cvg.about-us.our-company.index", $title)->with('result', $result); 
 	}
@@ -103,6 +130,13 @@ class DefaultController extends DataController
 		$title = array('pageTitle' => Lang::get("website.Contact Us"));
 		$result = array();			
 		$result['commonContent'] = $this->commonContent();
+
+		$pages = DB::table('pages')
+					->leftJoin('pages_description','pages_description.page_id','=','pages.page_id')
+					->where([['pages.status','1'],['type',2],['pages_description.language_id',session('language_id')],['pages.slug','FRANCHISE-WITH-CVG']])->get();
+		
+		$title = array('pageTitle' => $pages[0]->name);
+		$result['pages'] = $pages;		
 		
 		return view("cvg.franchise.index", $title)->with('result', $result); 
 	}
@@ -112,6 +146,16 @@ class DefaultController extends DataController
 		$title = array('pageTitle' => Lang::get("website.Contact Us"));
 		$result = array();			
 		$result['commonContent'] = $this->commonContent();
+		 
+		$pages = DB::table('pages')
+					->leftJoin('pages_description','pages_description.page_id','=','pages.page_id')
+					->where([['pages.status','1'],['type',2],['pages_description.language_id',session('language_id')],['pages.slug','SERVICES']])->get();
+		$service = DB::table('service')
+					->where('service.language_id',session('language_id'))->get();			
+		
+		$title = array('pageTitle' => $pages[0]->name);
+		$result['pages'] = $pages;		
+		$result['service'] = $service;
 		
 		return view("cvg.service.index", $title)->with('result', $result); 
 	}

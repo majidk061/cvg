@@ -4,7 +4,15 @@
  
   <section id="hero">
      <div class="row">
-       <img src="https://ricinzconstruction.co.za/wp-content/uploads/2018/02/about-us-banner.jpg" class="static-img">
+       @if(count($result['commonContent']['homeBanners'])>0)
+            @foreach(($result['commonContent']['homeBanners']) as $homeBanners)
+                @if($homeBanners->type=='Contact US Banner')
+                  <a title="Banner Image" href="{{ $homeBanners->banners_url}}">
+                    <img src="{{asset('').$homeBanners->banners_image}}" class="static-img" style="width: 1381px">
+                  </a>
+                @endif
+            @endforeach
+        @endif
      </div>
      
   </section><!-- End Hero -->

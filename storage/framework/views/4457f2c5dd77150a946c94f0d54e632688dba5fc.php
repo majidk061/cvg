@@ -55,8 +55,31 @@
           </ul>
         </li>
          <?php endif; ?>
+         <?php if(session('news_view')==1  or auth()->guard('admin')->user()->adminType=='1'): ?>
+        <li class="treeview <?php echo e(Request::is('admin/newscategories') ? 'active' : ''); ?> <?php echo e(Request::is('admin/addnewscategory') ? 'active' : ''); ?> <?php echo e(Request::is('admin/editnewscategory/*') ? 'active' : ''); ?> <?php echo e(Request::is('admin/news') ? 'active' : ''); ?>  <?php echo e(Request::is('admin/addsubnews') ? 'active' : ''); ?>  <?php echo e(Request::is('admin/editsubnews/*') ? 'active' : ''); ?>">
+          <a href="#">
+            <i class="fa fa-database" aria-hidden="true"></i>
+<span><?php echo e(trans('labels.Service')); ?></span> <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
             
+            <li class="<?php echo e(Request::is('admin/service') ? 'active' : ''); ?>  <?php echo e(Request::is('admin/addservice') ? 'active' : ''); ?>  <?php echo e(Request::is('admin/editservice/*') ? 'active' : ''); ?>"><a href="<?php echo e(URL::to('admin/service')); ?>"><i class="fa fa-circle-o"></i> <?php echo e(trans('labels.Service')); ?></a></li>
+          </ul>
+        </li>
+         <?php endif; ?>   
          
+        <?php if(session('news_view')==1  or auth()->guard('admin')->user()->adminType=='1'): ?>
+        <li class="treeview <?php echo e(Request::is('admin/newstestimonial') ? 'active' : ''); ?> <?php echo e(Request::is('admin/addstestimonial') ? 'active' : ''); ?> <?php echo e(Request::is('admin/edittestimonial/*') ? 'active' : ''); ?> <?php echo e(Request::is('admin/testimonial') ? 'active' : ''); ?>  <?php echo e(Request::is('admin/addtestimonial') ? 'active' : ''); ?>  <?php echo e(Request::is('admin/edittestimonial/*') ? 'active' : ''); ?>">
+          <a href="#">
+            <i class="fa fa-database" aria-hidden="true"></i>
+<span><?php echo e(trans('labels.Testimonials')); ?></span> <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            
+            <li class="<?php echo e(Request::is('admin/testimonial') ? 'active' : ''); ?>  <?php echo e(Request::is('admin/addtestimonial') ? 'active' : ''); ?>  <?php echo e(Request::is('admin/edittestimonial/*') ? 'active' : ''); ?>"><a href="<?php echo e(URL::to('admin/testimonial')); ?>"><i class="fa fa-circle-o"></i> <?php echo e(trans('labels.Testimonials')); ?></a></li>
+          </ul>
+        </li>
+         <?php endif; ?>  
          
         <?php if(session('website_setting_view')==1 or auth()->guard('admin')->user()->adminType=='1'): ?>
         

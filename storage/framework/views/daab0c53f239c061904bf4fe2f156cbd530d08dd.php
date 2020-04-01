@@ -55,7 +55,7 @@
                             	<div class="form-group">
                                   <label for="name" class="col-sm-2 col-md-3 control-label"><?php echo e(trans('labels.Language')); ?></label>
                                   <div class="col-sm-10 col-md-4">
-                                      <select class="form-control" name="languages_id">
+                                      <select class="form-control" name="languages_id"> 
                                           <?php $__currentLoopData = $result['languages']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $language): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                               <option value="<?php echo e($language->languages_id); ?>"><?php echo e($language->name); ?></option>
                                           <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -69,13 +69,13 @@
                                   <label for="name" class="col-sm-2 col-md-3 control-label"><?php echo e(trans('labels.Side Banner')); ?></label>
                                   <div class="col-sm-10 col-md-4">
                                       <select class="form-control" name="type">
-                                          <option value="1"><?php echo e(trans('labels.Side Banner 1')); ?></option>
-                                          <option value="2"><?php echo e(trans('labels.Side Banner 2')); ?></option>
-                                          <option value="3"><?php echo e(trans('labels.Side Banner 3')); ?></option>
-                                          <option value="4"><?php echo e(trans('labels.Side Banner 4')); ?></option>
-                                          <option value="5"><?php echo e(trans('labels.Side Banner 5')); ?></option>
-                                          <option value="6"><?php echo e(trans('labels.Side Banner 6')); ?></option>
-                                          <option value="7"><?php echo e(trans('labels.Side Banner 7')); ?></option>
+                                          <option value="<?php echo e(trans('labels.Side Banner 1')); ?>"><?php echo e(trans('labels.Side Banner 1')); ?></option>
+                                          <option value="<?php echo e(trans('labels.Side Banner 2')); ?>"><?php echo e(trans('labels.Side Banner 2')); ?></option>
+                                          <option value="<?php echo e(trans('labels.Side Banner 3')); ?>"><?php echo e(trans('labels.Side Banner 3')); ?></option>
+                                          <option value="<?php echo e(trans('labels.Side Banner 4')); ?>"><?php echo e(trans('labels.Side Banner 4')); ?></option>
+                                          <option value="<?php echo e(trans('labels.Side Banner 5')); ?>"><?php echo e(trans('labels.Side Banner 5')); ?></option>
+                                          <option value="<?php echo e(trans('labels.Side Banner 6')); ?>"><?php echo e(trans('labels.Side Banner 6')); ?></option>
+                                          <option value="<?php echo e(trans('labels.Side Banner 7')); ?>"><?php echo e(trans('labels.Side Banner 7')); ?></option>
                                       </select>
                                       <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
                                       <?php echo e(trans('labels.AddBannerText')); ?></span>
