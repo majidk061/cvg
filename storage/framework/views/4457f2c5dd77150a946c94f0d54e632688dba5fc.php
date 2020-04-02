@@ -67,6 +67,19 @@
           </ul>
         </li>
          <?php endif; ?>   
+
+        <?php if(session('news_view')==1  or auth()->guard('admin')->user()->adminType=='1'): ?>
+        <li class="treeview <?php echo e(Request::is('admin/location') ? 'active' : ''); ?> <?php echo e(Request::is('admin/addlocation') ? 'active' : ''); ?> <?php echo e(Request::is('admin/editlocation/*') ? 'active' : ''); ?>">
+          <a href="#">
+            <i class="fa fa-database" aria-hidden="true"></i>
+<span><?php echo e(trans('labels.Location')); ?></span> <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            
+            <li class="<?php echo e(Request::is('admin/location') ? 'active' : ''); ?>  <?php echo e(Request::is('admin/addlocation') ? 'active' : ''); ?>  <?php echo e(Request::is('admin/editlocation/*') ? 'active' : ''); ?>"><a href="<?php echo e(URL::to('admin/location')); ?>"><i class="fa fa-circle-o"></i> <?php echo e(trans('labels.Location')); ?></a></li>
+          </ul>
+        </li>
+        <?php endif; ?>   
          
         <?php if(session('news_view')==1  or auth()->guard('admin')->user()->adminType=='1'): ?>
         <li class="treeview <?php echo e(Request::is('admin/newstestimonial') ? 'active' : ''); ?> <?php echo e(Request::is('admin/addstestimonial') ? 'active' : ''); ?> <?php echo e(Request::is('admin/edittestimonial/*') ? 'active' : ''); ?> <?php echo e(Request::is('admin/testimonial') ? 'active' : ''); ?>  <?php echo e(Request::is('admin/addtestimonial') ? 'active' : ''); ?>  <?php echo e(Request::is('admin/edittestimonial/*') ? 'active' : ''); ?>">
@@ -92,18 +105,12 @@
           <ul class="treeview-menu">
             <li class="<?php echo e(Request::is('admin/constantbanners') ? 'active' : ''); ?> <?php echo e(Request::is('admin/addconstantbanner') ? 'active' : ''); ?> <?php echo e(Request::is('admin/editconstantbanner/*') ? 'active' : ''); ?>"><a href="<?php echo e(URL::to('admin/constantbanners')); ?>"><i class="fa fa-circle-o"></i> <?php echo e(trans('labels.link_Constant_Banners')); ?></a></li>
         
-       <li class="<?php echo e(Request::is('admin/mailchimp') ? 'active' : ''); ?>"><a href="<?php echo e(URL::to('admin/mailchimp')); ?>"><i class="fa fa-circle-o"></i> <?php echo e(trans('labels.link_mailchimp')); ?></a></li>
+        
         
             <li class="<?php echo e(Request::is('admin/sliders') ? 'active' : ''); ?> <?php echo e(Request::is('admin/addsliderimage') ? 'active' : ''); ?> <?php echo e(Request::is('admin/editslide/*') ? 'active' : ''); ?> "><a href="<?php echo e(URL::to('admin/sliders')); ?>"><i class="fa fa-circle-o"></i> <?php echo e(trans('labels.link_Sliders')); ?></a></li>
           
             <li class="<?php echo e(Request::is('admin/webpages') ? 'active' : ''); ?>  <?php echo e(Request::is('admin/addwebpage') ? 'active' : ''); ?>  <?php echo e(Request::is('admin/editwebpage/*') ? 'active' : ''); ?>"><a href="<?php echo e(URL::to('admin/webpages')); ?>"><i class="fa fa-circle-o"></i> <?php echo e(trans('labels.content_pages')); ?></a></li>
-            
-            <li class="<?php echo e(Request::is('admin/webthemes') ? 'active' : ''); ?> "><a href="<?php echo e(URL::to('admin/webthemes')); ?>"><i class="fa fa-circle-o"></i> <?php echo e(trans('labels.website_themes')); ?></a></li>
-            
-            <li class="<?php echo e(Request::is('admin/seo') ? 'active' : ''); ?> "><a href="<?php echo e(URL::to('admin/seo')); ?>"><i class="fa fa-circle-o"></i> <?php echo e(trans('labels.seo content')); ?></a></li>
-            
-            <li class="<?php echo e(Request::is('admin/customstyle') ? 'active' : ''); ?> "><a href="<?php echo e(URL::to('admin/customstyle')); ?>"><i class="fa fa-circle-o"></i> <?php echo e(trans('labels.custom_style_js')); ?></a></li>
-            
+              
             <li class="<?php echo e(Request::is('admin/websettings') ? 'active' : ''); ?>"><a href="<?php echo e(URL::to('admin/websettings')); ?>"><i class="fa fa-circle-o"></i> <?php echo e(trans('labels.link_setting')); ?></a></li>
           </ul>
         </li>

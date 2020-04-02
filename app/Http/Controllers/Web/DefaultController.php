@@ -59,11 +59,11 @@ class DefaultController extends DataController
 	
 	//index 
 	public function index(Request $request){
-		
+		 
 		$title = array('pageTitle' => Lang::get("website.Home"));
 		$result = array();			
 		$result['commonContent'] = $this->commonContent();
- 		
+ 		 
 		//current time
 		$currentDate = Carbon\Carbon::now();
 		$currentDate = $currentDate->toDateTimeString();
@@ -72,11 +72,10 @@ class DefaultController extends DataController
 		   ->select('sliders_id as id', 'sliders_title as title', 'sliders_url as url', 'sliders_image as image', 'type', 'sliders_title as title')
 		   ->where('status', '=', '1')
 		   ->where('languages_id', '=', session('language_id'))
-		   ->where('expires_date', '>', $currentDate)
 		   ->get();
 		
 		$result['slides'] = $slides;
-		
+		 
 		$pages = DB::table('pages')
 					->leftJoin('pages_description','pages_description.page_id','=','pages.page_id')
 					->where([['pages.status','1'],['type',2],['pages_description.language_id',session('language_id')],['pages.slug','Home']])->get();
@@ -87,6 +86,13 @@ class DefaultController extends DataController
 					->where([['pages.status','1'],['type',2],['pages_description.language_id',session('language_id')],['pages.slug','SERVICES']])->get();
 		$service = DB::table('service')
 					->where('service.language_id',session('language_id'))->paginate(3);	
+		$testimonial = DB::table('testimonial')
+			->Join('testimonial_description', 'testimonial_description.testimonial_id', '=', 'testimonial.testimonial_id')
+			->Join('testimonial_image', 'testimonial_image.testimonial_id', '=', 'testimonial.testimonial_id')
+			->select('testimonial.testimonial_slug','testimonial.rating','testimonial.created_at','testimonial.updated_at', 'testimonial_description.*','testimonial_image.image_url')
+			->where('testimonial_description.language_id','=', session('language_id'))
+			->orderBy('testimonial.testimonial_id', 'ASC')
+			->get();				
 		$contact_pages = DB::table('pages')
 				->leftJoin('pages_description','pages_description.page_id','=','pages.page_id')
 				->where([['pages.status','1'],['type',2],['pages_description.language_id',session('language_id')],['pages.slug','CONTACT-US']])->get();
@@ -103,6 +109,7 @@ class DefaultController extends DataController
 		$result['contact_pages'] = $contact_pages;	
 		$result['our_company_pages'] = $our_company_pages;		
 		$result['frenchise_pages'] = $frenchise_pages;	
+		$result['testimonial'] = $testimonial;	
 		 
 		
 		return view("cvg.home.index", $title)->with('result', $result); 
@@ -124,6 +131,27 @@ class DefaultController extends DataController
 		
 		return view("cvg.about-us.our-company.index", $title)->with('result', $result); 
 	}
+
+	//our loaction
+	public function Location(Request $request){
+		$title = array('pageTitle' => Lang::get("website.Contact Us"));
+		$result = array();			
+		$result['commonContent'] = $this->commonContent();
+
+		$pages = DB::table('pages')
+					->leftJoin('pages_description','pages_description.page_id','=','pages.page_id')
+					->where([['pages.status','1'],['type',2],['pages_description.language_id',session('language_id')],['pages.slug','Our-Location']])->get();
+		
+		$location = DB::table('location')
+					 ->get();
+		$title = array('pageTitle' => $pages[0]->name);
+		$result['pages'] = $pages;	
+		$result['location'] = $location;
+		 	
+		
+		return view("cvg.about-us.our-location.index", $title)->with('result', $result); 
+	}
+
 
 	//Franchise With CVG
 	public function Franchise(Request $request){

@@ -60,19 +60,7 @@
                               </div>
                             </div>
                             
-                            <div class="form-group">
-                              <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.CurrencySymbol') }}</label>
-                              <div class="col-sm-10 col-md-4">
-                                {!! Form::text($result['settings'][19]->name, $result['settings'][19]->value, array('class'=>'form-control', 'id'=>$result['settings'][19]->name)) !!}<span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;margin-top: 0;">{{ trans('labels.CurrencySymbolText') }}</span>
-                              </div>
-                            </div>
-                            
-                            <div class="form-group">
-                              <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.NewProductDuration') }}</label>
-                              <div class="col-sm-10 col-md-4">
-                                {!! Form::text($result['settings'][20]->name, $result['settings'][20]->value, array('class'=>'form-control', 'id'=>$result['settings'][20]->name)) !!}<span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;margin-top: 0;">{{ trans('labels.NewProductDurationText') }}</span>
-                              </div>
-                            </div>
+                                
                             <hr>
                             <div class="form-group">
                               <label for="name" class="col-sm-2 col-md-3 control-label"> {{ trans('labels.WebLogo') }} </label>
@@ -106,29 +94,7 @@
                               </div>
                             </div>
                             
-                            <hr>                            
-                            <h4>{{ trans('labels.OrderEmail') }}</h4>
-                            <hr>
-                            
-                            <div class="form-group">
-                              <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.OrderEmail') }}</label>
-                              <div class="col-sm-10 col-md-4">
-                                {!! Form::text($result['settings'][70]->name, $result['settings'][70]->value, array('class'=>'form-control', 'id'=>$result['settings'][70]->name)) !!}<span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;margin-top: 0;">
-                                {{ trans('labels.OrderEmailText') }}</span>
-                              </div>
-                            </div>
-                            
-                            <hr>                            
-                            <h4>{{ trans('labels.Free Shpping on Min Order Price') }}</h4>
-                            <hr>
-                            
-                            <div class="form-group">
-                              <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.Min Order Price') }}</label>
-                              <div class="col-sm-10 col-md-4">
-                                {!! Form::text($result['settings'][82]->name, $result['settings'][82]->value, array('class'=>'form-control', 'id'=>$result['settings'][82]->name)) !!}<span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;margin-top: 0;">
-                                {{ trans('labels.Min Order Price Text') }}</span>
-                              </div>
-                            </div>
+                             
                             
                             <hr>
                             <h4>{{ trans('labels.OurInfo') }}</h4>

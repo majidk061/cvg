@@ -11,11 +11,31 @@
               </select>
           </div>
           <div class="social-links header-icon pull-right">
-            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+             
+
+                      <?php if(!empty($result['commonContent']['setting'][50]->value)): ?>
+                        <a href="<?php echo e($result['commonContent']['setting'][50]->value); ?>"  class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
+                        <?php else: ?>
+                          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                        <?php endif; ?>                        
+                     
+                    <?php if(!empty($result['commonContent']['setting'][52]->value)): ?>
+                        <a href="<?php echo e($result['commonContent']['setting'][52]->value); ?>"  class="twitter" target="_blank"><i class="bx bxl-twitter"></i></a>
+                    <?php else: ?>
+                        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                    <?php endif; ?> 
+                    <?php if(!empty($result['commonContent']['setting'][51]->value)): ?>
+                        <a href="<?php echo e($result['commonContent']['setting'][51]->value); ?>" class="google" target="_blank"><i class="bx bxl-google"></i></a>
+                    <?php else: ?>
+                        <a href="#" class="google"><i class="bx bxl-google"></i></a>
+                    <?php endif; ?>
+                     
+                    <?php if(!empty($result['commonContent']['setting'][53]->value)): ?>
+                        <a href="<?php echo e($result['commonContent']['setting'][53]->value); ?>"  class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
+                    <?php else: ?>
+                        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                    <?php endif; ?>
+                    
           </div>
         </div>
         
@@ -38,12 +58,12 @@
           <li class="drop-down"><a href="">About Us</a>
             <ul>
               <li><a href="<?php echo e(URL::to('our-company')); ?>">Our Company</a></li>
-              <li><a href="#">Our Locations</a></li> 
+              <li><a href="<?php echo e(URL::to('our-location')); ?>">Our Locations</a></li> 
             </ul>
           </li>
           <li><a href="<?php echo e(URL::to('services')); ?>">Services</a></li>
           <li><a href="<?php echo e(URL::to('Franchise-With-CVG')); ?>">Franchise With CVG</a></li>
-          <li><a href="<?php echo e(URL::to('testimonials')); ?>">Testimonials</a></li>
+          <li><a href="<?php echo e(URL::to('index#testimonial')); ?>">Testimonials</a></li>
           <li><a href="<?php echo e(URL::to('news')); ?>">News</a></li>
           <li><a href="<?php echo e(URL::to('contact-us')); ?>">Contact Us</a></li>
         </ul>

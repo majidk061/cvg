@@ -48,85 +48,8 @@
                             <?php echo Form::open(array('url' =>'admin/updateSetting', 'method'=>'post', 'class' => 'form-horizontal', 'enctype'=>'multipart/form-data')); ?>
 
                             <br>
-                            
-                            <div class="form-group">
-                              <label for="name" class="col-sm-2 col-md-3 control-label"><?php echo e(trans('labels.homeStyle')); ?>
-
-                              
-                              </label>
-                              <div class="col-sm-10 col-md-4">
-                              <select name="<?php echo e($result['settings'][80]->name); ?>" class="form-control">
-                              	<option <?php if($result['settings'][80]->value == 'one'): ?>
-                                        selected
-                                    <?php endif; ?>
-                                 value="one"> <?php echo e(trans('labels.Style1')); ?></option>
-                                <option <?php if($result['settings'][80]->value == 'two'): ?>
-                                        selected
-                                    <?php endif; ?>
-                                 value="two"> <?php echo e(trans('labels.Style2')); ?></option>
-                              	<option <?php if($result['settings'][80]->value == 'three'): ?>
-                                        selected
-                                    <?php endif; ?>
-                                 value="three"> <?php echo e(trans('labels.Style3')); ?></option>
-                               </select>
-                                
-                                <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;margin-top: 0;"><?php echo e(trans('labels.homeStyleText')); ?></span>
-                              </div>
-                            </div>
-                            
-                            
-                            <div class="form-group">
-                              <label for="name" class="col-sm-2 col-md-3 control-label"><?php echo e(trans('labels.Home Colors')); ?>
-
-                              
-                              </label>
-                              <div class="col-sm-10 col-md-4">
-                              <select name="<?php echo e($result['settings'][81]->name); ?>" class="form-control">
-                              	<option <?php if($result['settings'][81]->value == 'app'): ?>
-                                        selected
-                                    <?php endif; ?>
-                                 value="app"> <?php echo e(trans('labels.Default')); ?></option>
-                                <option <?php if($result['settings'][81]->value == 'app.theme.1'): ?>
-                                        selected
-                                    <?php endif; ?>
-                                 value="app.theme.1"> <?php echo e(trans('labels.Black/Red')); ?></option>
-                                <option <?php if($result['settings'][81]->value == 'app.theme.2'): ?>
-                                        selected
-                                    <?php endif; ?>
-                                 value="app.theme.2"> <?php echo e(trans('labels.White/Blue')); ?></option>
-                                <option <?php if($result['settings'][81]->value == 'app.theme.3'): ?>
-                                        selected
-                                    <?php endif; ?>
-                                 value="app.theme.3"> <?php echo e(trans('labels.White/Parrot')); ?></option>
-                                <option <?php if($result['settings'][81]->value == 'app.theme.4'): ?>
-                                        selected
-                                    <?php endif; ?>
-                                 value="app.theme.4"> <?php echo e(trans('labels.Cyan/Blue')); ?></option>
-                                <option <?php if($result['settings'][81]->value == 'app.theme.5'): ?>
-                                        selected
-                                    <?php endif; ?>
-                                 value="app.theme.5"> <?php echo e(trans('labels.Brown/Skin')); ?></option>
-                                <option <?php if($result['settings'][81]->value == 'app.theme.6'): ?>
-                                        selected
-                                    <?php endif; ?>
-                                 value="app.theme.6"> <?php echo e(trans('labels.White/Yellow')); ?></option>
-                                <option <?php if($result['settings'][81]->value == 'app.theme.7'): ?>
-                                        selected
-                                    <?php endif; ?>
-                                 value="app.theme.7"> <?php echo e(trans('labels.White/Red')); ?></option>
-                                <option <?php if($result['settings'][81]->value == 'app.theme.8'): ?>
-                                        selected
-                                    <?php endif; ?>
-                                 value="app.theme.8"> <?php echo e(trans('labels.Baby Pink/Purple')); ?></option>
-                                <option <?php if($result['settings'][81]->value == 'app.theme.9'): ?>
-                                        selected
-                                    <?php endif; ?>
-                                 value="app.theme.9"> <?php echo e(trans('labels.Black/White')); ?></option>
-                               </select>
-                                
-                                <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;margin-top: 0;"><?php echo e(trans('labels.homecolorText')); ?></span>
-                              </div>
-                            </div>
+                             
+                             
                             
                             <div class="form-group">
                               <label for="name" class="col-sm-2 col-md-3 control-label"><?php echo e(trans('labels.sitename logo')); ?></label>

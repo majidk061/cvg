@@ -111,13 +111,13 @@
 		<div class="modal-content">
 		  <div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			<h4 class="modal-title" id="deleteNewsModalLabel">{{ trans('labels.DeleteService') }}</h4>
+			<h4 class="modal-title" id="deleteNewsModalLabel">{{ trans('labels.DeleteTestimonials') }}</h4>
 		  </div>
-		  {!! Form::open(array('url' =>'admin/deleteservice', 'name'=>'deleteNews', 'method'=>'post', 'class' => 'form-horizontal', 'enctype'=>'multipart/form-data')) !!}
+		  {!! Form::open(array('url' =>'admin/deletetestimonial', 'name'=>'deleteNews', 'method'=>'post', 'class' => 'form-horizontal', 'enctype'=>'multipart/form-data')) !!}
 				  {!! Form::hidden('action',  'delete', array('class'=>'form-control')) !!}
 				  {!! Form::hidden('id','', array('class'=>'form-control', 'id'=>'id')) !!}
 		  <div class="modal-body">						
-			  <p>{{ trans('labels.DeleteServiceText') }}</p>
+			  <p>{{ trans('labels.DeleteTestimonialsText') }}</p>
 		  </div>
 		  <div class="modal-footer">
 			<button type="button" class="btn btn-default" data-dismiss="modal">{{ trans('labels.Close') }}</button>

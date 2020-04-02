@@ -3,10 +3,10 @@
 <div class="content-wrapper"> 
   <!-- Content Header (Page header) -->
   <section class="content-header">
-    <h1> {{ trans('labels.Service') }} <small>{{ trans('labels.ListingAllService') }}...</small> </h1>
+    <h1> {{ trans('labels.Location') }} <small>{{ trans('labels.ListingAllLocation') }}...</small> </h1>
     <ol class="breadcrumb">
       <li><a href="{{ URL::to('admin/dashboard/this_month')}}"><i class="fa fa-dashboard"></i> {{ trans('labels.breadcrumb_dashboard') }}</a></li>
-      <li class="active">{{ trans('labels.Service') }}</li>
+      <li class="active">{{ trans('labels.Location') }}</li>
     </ol>
   </section>
   
@@ -20,9 +20,9 @@
       <div class="col-md-12">
         <div class="box">
           <div class="box-header">
-            <h3 class="box-title">{{ trans('labels.ListingAllService') }} </h3>
+            <h3 class="box-title">{{ trans('labels.ListingAllLocation') }} </h3>
             <div class="box-tools pull-right">
-            	<a href="{{ URL::to('admin/addservice')}}" type="button" class="btn btn-block btn-primary">{{ trans('labels.AddService') }}</a>
+            	<a href="{{ URL::to('admin/addlocation')}}" type="button" class="btn btn-block btn-primary">{{ trans('labels.AddLocation') }}</a>
             </div>
           </div>
           <!-- /.box-header -->
@@ -47,10 +47,11 @@
                   <thead>
                     <tr>
                       <th>{{ trans('labels.ID') }}</th>
-                      <th>{{ trans('labels.Image') }}</th>
-                      <th>{{ trans('labels.Name') }}</th>
-                      <th>Description</th>
-                      <th>Date</th>
+                      <th>{{ trans('labels.address') }}</th>
+                      <th>{{ trans('labels.slug') }}</th>
+                      <th>{{ trans('labels.lat') }}</th>
+                      <th>{{ trans('labels.lng') }}</th>
+                      <th>{{ trans('labels.date') }}</th>
                       <th></th>
                     </tr>
                   </thead>
@@ -60,13 +61,16 @@
                     @foreach ($news as  $key=>$new)
                     	
                         <tr>
-                            <td>{{ $new->service_id }}</td>
-                            <td><img src="{{asset('').'/'.$new->image}}" alt="" width=" 100px" height="100px"></td>
+                            <td>{{ $new->location_id }}</td>
+                            <td><strong>{{ $new->full_address }}</strong></td>
                             <td>
-                            	<strong>{{ $new->service_name }}</strong>
+                            	{{ $new->slug }}
                             </td>
                              <td>
-                              <strong>{!! $new->service_description !!}</strong>
+                              {{ $new->lat }}
+                            </td>
+                            <td>
+                              {{ $new->lng }}
                             </td>
                             <td>
                              	<strong>{{ trans('labels.AddedDate') }}: </strong> {{ $new->created_at }}<br>
@@ -74,9 +78,9 @@
                             </td>
                            
                             <td>
-                                <a data-toggle="tooltip" data-placement="bottom" title="{{ trans('labels.Edit') }}" href="editservice/{{ $new->service_id }}" class="badge bg-light-blue"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> 
+                                <a data-toggle="tooltip" data-placement="bottom" title="{{ trans('labels.Edit') }}" href="editlocation/{{ $new->location_id }}" class="badge bg-light-blue"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> 
                                 
-                                <a data-toggle="tooltip" data-placement="bottom" title="{{ trans('labels.Delete') }}" id="deleteNewsId" news_id="{{ $new->service_id }}" class="badge bg-red"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                <a data-toggle="tooltip" data-placement="bottom" title="{{ trans('labels.Delete') }}" id="deleteNewsId" news_id="{{ $new->location_id }}" class="badge bg-red"><i class="fa fa-trash" aria-hidden="true"></i></a>
                             </td>
                         </tr>
                     @endforeach
@@ -107,13 +111,13 @@
 		<div class="modal-content">
 		  <div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			<h4 class="modal-title" id="deleteNewsModalLabel">{{ trans('labels.DeleteService') }}</h4>
+			<h4 class="modal-title" id="deleteNewsModalLabel">{{ trans('labels.DeleteLocation') }}</h4>
 		  </div>
-		  {!! Form::open(array('url' =>'admin/deleteservice', 'name'=>'deleteNews', 'method'=>'post', 'class' => 'form-horizontal', 'enctype'=>'multipart/form-data')) !!}
+		  {!! Form::open(array('url' =>'admin/deletelocation', 'name'=>'deleteNews', 'method'=>'post', 'class' => 'form-horizontal', 'enctype'=>'multipart/form-data')) !!}
 				  {!! Form::hidden('action',  'delete', array('class'=>'form-control')) !!}
 				  {!! Form::hidden('id','', array('class'=>'form-control', 'id'=>'id')) !!}
 		  <div class="modal-body">						
-			  <p>{{ trans('labels.DeleteServiceText') }}</p>
+			  <p>{{ trans('labels.DeleteLocationText') }}</p>
 		  </div>
 		  <div class="modal-footer">
 			<button type="button" class="btn btn-default" data-dismiss="modal">{{ trans('labels.Close') }}</button>

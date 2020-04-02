@@ -46,83 +46,8 @@
                         
                             {!! Form::open(array('url' =>'admin/updateSetting', 'method'=>'post', 'class' => 'form-horizontal', 'enctype'=>'multipart/form-data')) !!}
                             <br>
-                            
-                            <div class="form-group">
-                              <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.homeStyle') }}
-                              
-                              </label>
-                              <div class="col-sm-10 col-md-4">
-                              <select name="{{$result['settings'][80]->name}}" class="form-control">
-                              	<option @if($result['settings'][80]->value == 'one')
-                                        selected
-                                    @endif
-                                 value="one"> {{ trans('labels.Style1') }}</option>
-                                <option @if($result['settings'][80]->value == 'two')
-                                        selected
-                                    @endif
-                                 value="two"> {{ trans('labels.Style2') }}</option>
-                              	<option @if($result['settings'][80]->value == 'three')
-                                        selected
-                                    @endif
-                                 value="three"> {{ trans('labels.Style3') }}</option>
-                               </select>
-                                
-                                <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;margin-top: 0;">{{ trans('labels.homeStyleText') }}</span>
-                              </div>
-                            </div>
-                            
-                            
-                            <div class="form-group">
-                              <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.Home Colors') }}
-                              
-                              </label>
-                              <div class="col-sm-10 col-md-4">
-                              <select name="{{$result['settings'][81]->name}}" class="form-control">
-                              	<option @if($result['settings'][81]->value == 'app')
-                                        selected
-                                    @endif
-                                 value="app"> {{ trans('labels.Default') }}</option>
-                                <option @if($result['settings'][81]->value == 'app.theme.1')
-                                        selected
-                                    @endif
-                                 value="app.theme.1"> {{ trans('labels.Black/Red') }}</option>
-                                <option @if($result['settings'][81]->value == 'app.theme.2')
-                                        selected
-                                    @endif
-                                 value="app.theme.2"> {{ trans('labels.White/Blue') }}</option>
-                                <option @if($result['settings'][81]->value == 'app.theme.3')
-                                        selected
-                                    @endif
-                                 value="app.theme.3"> {{ trans('labels.White/Parrot') }}</option>
-                                <option @if($result['settings'][81]->value == 'app.theme.4')
-                                        selected
-                                    @endif
-                                 value="app.theme.4"> {{ trans('labels.Cyan/Blue') }}</option>
-                                <option @if($result['settings'][81]->value == 'app.theme.5')
-                                        selected
-                                    @endif
-                                 value="app.theme.5"> {{ trans('labels.Brown/Skin') }}</option>
-                                <option @if($result['settings'][81]->value == 'app.theme.6')
-                                        selected
-                                    @endif
-                                 value="app.theme.6"> {{ trans('labels.White/Yellow') }}</option>
-                                <option @if($result['settings'][81]->value == 'app.theme.7')
-                                        selected
-                                    @endif
-                                 value="app.theme.7"> {{ trans('labels.White/Red') }}</option>
-                                <option @if($result['settings'][81]->value == 'app.theme.8')
-                                        selected
-                                    @endif
-                                 value="app.theme.8"> {{ trans('labels.Baby Pink/Purple') }}</option>
-                                <option @if($result['settings'][81]->value == 'app.theme.9')
-                                        selected
-                                    @endif
-                                 value="app.theme.9"> {{ trans('labels.Black/White') }}</option>
-                               </select>
-                                
-                                <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;margin-top: 0;">{{ trans('labels.homecolorText') }}</span>
-                              </div>
-                            </div>
+                             
+                             
                             
                             <div class="form-group">
                               <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.sitename logo') }}</label>

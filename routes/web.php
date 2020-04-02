@@ -371,6 +371,14 @@ Route::group(['prefix' => 'admin'], function () {
 			Route::post('/updateservice', 'ServiceController@updateservice');
 			Route::post('/deleteservice', 'ServiceController@deleteservice');
 
+			//location 
+			Route::get('/location', 'LocationController@location');
+			Route::get('/addlocation', 'LocationController@addslocation');
+			Route::post('/addlocation', 'LocationController@addlocation');
+			Route::get('/editlocation/{id}', 'LocationController@editlocation');
+			Route::post('/updatelocation', 'LocationController@updatelocation');
+			Route::post('/deletelocation', 'LocationController@deletelocation');
+
 			//testimonial 
 			Route::get('/testimonial', 'TestimonialController@testimonial');
 			Route::get('/addtestimonial', 'TestimonialController@addstestimonial');
@@ -480,6 +488,7 @@ Route::post('/language/', array(
 	
 
 	Route::get('/our-company', 'DefaultController@OurCompany');
+	Route::get('/our-location', 'DefaultController@Location');
 	Route::get('/services', 'DefaultController@Services');
 	Route::get('/Franchise-With-CVG', 'DefaultController@Franchise');
 	Route::get('/contact-us', 'DefaultController@ContactUs');

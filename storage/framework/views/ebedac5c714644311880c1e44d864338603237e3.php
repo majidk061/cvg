@@ -20,24 +20,19 @@
 <?php $__env->startSection('content'); ?>
 <section id="hero">
      <div class="row">
-       <img src="https://digitalmarketingdeal.com/blog/wp-content/uploads/2018/11/construction-output-header-120141-125553.jpg" class="static-img">
+        <?php if(count($result['commonContent']['homeBanners'])>0): ?>
+            <?php $__currentLoopData = ($result['commonContent']['homeBanners']); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $homeBanners): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <?php if($homeBanners->type=='News Banner'): ?>
+                  <a title="Banner Image" href="<?php echo e($homeBanners->banners_url); ?>">
+                    <img src="<?php echo e(asset('').$homeBanners->banners_image); ?>" class="static-img" style="width: 1381px">
+                  </a>
+                <?php endif; ?>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+        <?php endif; ?>
      </div>
-     
   </section><!-- End Hero -->
 
-  <div class="container-fluid">
-    <div class="container">
-       <div class="bradcram bounceInLeft animated">
-         <a href="<?php echo e(URL::to('/')); ?>"><?php echo app('translator')->getFromJson('website.Home'); ?></a> /
-         <?php if(!empty($result['categories_name'])): ?>
-            <a href="<?php echo e(URL::to('/news')); ?>"><?php echo app('translator')->getFromJson('website.News'); ?></a> /
-            <?php echo e($result['categories_name']); ?> 
-        <?php else: ?>
-            <?php echo app('translator')->getFromJson('website.News'); ?> 
-        <?php endif; ?>
-       </div>
-     </div>
-  </div>
+   
 <section class="site-content">
 	<div class="container">
 	<style>

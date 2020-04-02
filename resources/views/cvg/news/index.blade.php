@@ -20,24 +20,19 @@
 @section('content')
 <section id="hero">
      <div class="row">
-       <img src="https://digitalmarketingdeal.com/blog/wp-content/uploads/2018/11/construction-output-header-120141-125553.jpg" class="static-img">
+        @if(count($result['commonContent']['homeBanners'])>0)
+            @foreach(($result['commonContent']['homeBanners']) as $homeBanners)
+                @if($homeBanners->type=='News Banner')
+                  <a title="Banner Image" href="{{ $homeBanners->banners_url}}">
+                    <img src="{{asset('').$homeBanners->banners_image}}" class="static-img" style="width: 1381px">
+                  </a>
+                @endif
+            @endforeach
+        @endif
      </div>
-     
   </section><!-- End Hero -->
 
-  <div class="container-fluid">
-    <div class="container">
-       <div class="bradcram bounceInLeft animated">
-         <a href="{{ URL::to('/')}}">@lang('website.Home')</a> /
-         @if(!empty($result['categories_name']))
-            <a href="{{ URL::to('/news')}}">@lang('website.News')</a> /
-            {{$result['categories_name']}} 
-        @else
-            @lang('website.News') 
-        @endif
-       </div>
-     </div>
-  </div>
+   
 <section class="site-content">
 	<div class="container">
 	<style>

@@ -14,11 +14,11 @@ body {
 }
 
 a {
-  color: #f26b36;
+  color: #423e3cbf;
 }
 
 a:hover {
-  color: #fdd067;
+  color: #929291;
   text-decoration: none;
 }
 
@@ -552,7 +552,7 @@ section {
 }
 
 .about .image {
-  background: url("../img/about.jpg") center center no-repeat;
+  background: url("../img/Project Managers.webp") center center no-repeat;
   background-size: cover;
   min-height: 400px;
 }
@@ -1334,4 +1334,10 @@ section {
     color: #fff;
     background-color: #f26927;
     border-color: #f26927;
+}
+
+.location{
+    box-shadow: 1px 6px 6px 2px;
+    padding: 10px;
+    margin-bottom: 20px;
 }

@@ -20,17 +20,7 @@
 @section('content')
 <section class="site-content">
 	<div class="container">
-    	<div class="breadcum-area">
-            <div class="breadcum-inner">
-                <h3>@lang('website.News Detail')</h3>
-                <ol class="breadcrumb">
-                    
-                    <li class="breadcrumb-item"><a href="{{ URL::to('/')}}">@lang('website.Home')</a></li>
-                    <li class="breadcrumb-item"><a href="{{ URL::to('/news?category='.$result['news'][0]->news_categories_slug)}}"> {{$result['news'][0]->categories_name}}</a></li>
-                     <li class="breadcrumb-item active">@lang('website.News Detail')</li>
-                </ol>
-            </div>
-        </div>
+    	 
 
         <div class="blog-area">
             <div class="row">

@@ -6,7 +6,7 @@
      <div class="row">
        <?php if(count($result['commonContent']['homeBanners'])>0): ?>
             <?php $__currentLoopData = ($result['commonContent']['homeBanners']); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $homeBanners): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <?php if($homeBanners->type=='Our Company Banner'): ?>
+                <?php if($homeBanners->type=='Services Banner'): ?>
                   <a title="Banner Image" href="<?php echo e($homeBanners->banners_url); ?>">
                     <img src="<?php echo e(asset('').$homeBanners->banners_image); ?>" class="static-img" style="width: 1381px">
                   </a>

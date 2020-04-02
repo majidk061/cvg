@@ -6,7 +6,7 @@
      <div class="row">
        @if(count($result['commonContent']['homeBanners'])>0)
             @foreach(($result['commonContent']['homeBanners']) as $homeBanners)
-                @if($homeBanners->type=='Our Company Banner')
+                @if($homeBanners->type=='Services Banner')
                   <a title="Banner Image" href="{{ $homeBanners->banners_url}}">
                     <img src="{{asset('').$homeBanners->banners_image}}" class="static-img" style="width: 1381px">
                   </a>

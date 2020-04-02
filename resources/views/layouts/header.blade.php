@@ -11,11 +11,31 @@
               </select>
           </div>
           <div class="social-links header-icon pull-right">
-            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+             
+
+                      @if(!empty($result['commonContent']['setting'][50]->value))
+                        <a href="{{$result['commonContent']['setting'][50]->value}}"  class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
+                        @else
+                          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                        @endif                        
+                     
+                    @if(!empty($result['commonContent']['setting'][52]->value))
+                        <a href="{{$result['commonContent']['setting'][52]->value}}"  class="twitter" target="_blank"><i class="bx bxl-twitter"></i></a>
+                    @else
+                        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                    @endif 
+                    @if(!empty($result['commonContent']['setting'][51]->value))
+                        <a href="{{$result['commonContent']['setting'][51]->value}}" class="google" target="_blank"><i class="bx bxl-google"></i></a>
+                    @else
+                        <a href="#" class="google"><i class="bx bxl-google"></i></a>
+                    @endif
+                     
+                    @if(!empty($result['commonContent']['setting'][53]->value))
+                        <a href="{{$result['commonContent']['setting'][53]->value}}"  class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
+                    @else
+                        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                    @endif
+                    
           </div>
         </div>
         
@@ -38,12 +58,12 @@
           <li class="drop-down"><a href="">About Us</a>
             <ul>
               <li><a href="{{URL::to('our-company')}}">Our Company</a></li>
-              <li><a href="#">Our Locations</a></li> 
+              <li><a href="{{URL::to('our-location')}}">Our Locations</a></li> 
             </ul>
           </li>
           <li><a href="{{URL::to('services')}}">Services</a></li>
           <li><a href="{{URL::to('Franchise-With-CVG')}}">Franchise With CVG</a></li>
-          <li><a href="{{URL::to('testimonials')}}">Testimonials</a></li>
+          <li><a href="{{URL::to('index#testimonial')}}">Testimonials</a></li>
           <li><a href="{{URL::to('news')}}">News</a></li>
           <li><a href="{{URL::to('contact-us')}}">Contact Us</a></li>
         </ul>

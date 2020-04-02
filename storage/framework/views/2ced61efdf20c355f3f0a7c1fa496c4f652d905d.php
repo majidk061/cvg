@@ -1282,8 +1282,15 @@ $(document).on('click', '#updateAddress', function(e){
 		$("#deleteNewsModal").modal('show');
 	});
 
-	//deleteNewsModal
+	//deleteServiceModal
 	$(document).on('click', '#deleteServiceId', function(){
+		var id = $(this).attr('news_id');
+		$('#id').val(id);
+		$("#deleteNewsModal").modal('show');
+	});
+
+	//deleteTestimonialModal
+	$(document).on('click', '#deleteTestimonialId', function(){
 		var id = $(this).attr('news_id');
 		$('#id').val(id);
 		$("#deleteNewsModal").modal('show');

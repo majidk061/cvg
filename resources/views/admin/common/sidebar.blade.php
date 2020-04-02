@@ -67,6 +67,19 @@
           </ul>
         </li>
          @endif   
+
+        @if(session('news_view')==1  or auth()->guard('admin')->user()->adminType=='1')
+        <li class="treeview {{ Request::is('admin/location') ? 'active' : '' }} {{ Request::is('admin/addlocation') ? 'active' : '' }} {{ Request::is('admin/editlocation/*') ? 'active' : '' }}">
+          <a href="#">
+            <i class="fa fa-database" aria-hidden="true"></i>
+<span>{{ trans('labels.Location') }}</span> <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            
+            <li class="{{ Request::is('admin/location') ? 'active' : '' }}  {{ Request::is('admin/addlocation') ? 'active' : '' }}  {{ Request::is('admin/editlocation/*') ? 'active' : '' }}"><a href="{{ URL::to('admin/location')}}"><i class="fa fa-circle-o"></i> {{ trans('labels.Location') }}</a></li>
+          </ul>
+        </li>
+        @endif   
          
         @if(session('news_view')==1  or auth()->guard('admin')->user()->adminType=='1')
         <li class="treeview {{ Request::is('admin/newstestimonial') ? 'active' : '' }} {{ Request::is('admin/addstestimonial') ? 'active' : '' }} {{ Request::is('admin/edittestimonial/*') ? 'active' : '' }} {{ Request::is('admin/testimonial') ? 'active' : '' }}  {{ Request::is('admin/addtestimonial') ? 'active' : '' }}  {{ Request::is('admin/edittestimonial/*') ? 'active' : '' }}">
@@ -92,18 +105,12 @@
           <ul class="treeview-menu">
             <li class="{{ Request::is('admin/constantbanners') ? 'active' : '' }} {{ Request::is('admin/addconstantbanner') ? 'active' : '' }} {{ Request::is('admin/editconstantbanner/*') ? 'active' : '' }}"><a href="{{ URL::to('admin/constantbanners')}}"><i class="fa fa-circle-o"></i> {{ trans('labels.link_Constant_Banners') }}</a></li>
         
-       <li class="{{ Request::is('admin/mailchimp') ? 'active' : '' }}"><a href="{{ URL::to('admin/mailchimp')}}"><i class="fa fa-circle-o"></i> {{ trans('labels.link_mailchimp') }}</a></li>
+        
         
             <li class="{{ Request::is('admin/sliders') ? 'active' : '' }} {{ Request::is('admin/addsliderimage') ? 'active' : '' }} {{ Request::is('admin/editslide/*') ? 'active' : '' }} "><a href="{{ URL::to('admin/sliders')}}"><i class="fa fa-circle-o"></i> {{ trans('labels.link_Sliders') }}</a></li>
           
             <li class="{{ Request::is('admin/webpages') ? 'active' : '' }}  {{ Request::is('admin/addwebpage') ? 'active' : '' }}  {{ Request::is('admin/editwebpage/*') ? 'active' : '' }}"><a href="{{ URL::to('admin/webpages')}}"><i class="fa fa-circle-o"></i> {{ trans('labels.content_pages') }}</a></li>
-            
-            <li class="{{ Request::is('admin/webthemes') ? 'active' : '' }} "><a href="{{ URL::to('admin/webthemes')}}"><i class="fa fa-circle-o"></i> {{ trans('labels.website_themes') }}</a></li>
-            
-            <li class="{{ Request::is('admin/seo') ? 'active' : '' }} "><a href="{{ URL::to('admin/seo')}}"><i class="fa fa-circle-o"></i> {{ trans('labels.seo content') }}</a></li>
-            
-            <li class="{{ Request::is('admin/customstyle') ? 'active' : '' }} "><a href="{{ URL::to('admin/customstyle')}}"><i class="fa fa-circle-o"></i> {{ trans('labels.custom_style_js') }}</a></li>
-            
+              
             <li class="{{ Request::is('admin/websettings') ? 'active' : '' }}"><a href="{{ URL::to('admin/websettings')}}"><i class="fa fa-circle-o"></i> {{ trans('labels.link_setting') }}</a></li>
           </ul>
         </li>

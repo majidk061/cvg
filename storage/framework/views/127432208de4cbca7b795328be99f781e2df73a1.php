@@ -50,6 +50,7 @@
                       <th><?php echo e(trans('labels.Image')); ?></th>
                       <th><?php echo e(trans('labels.Name')); ?></th>
                       <th>Description</th>
+                      <th>Date</th>
                       <th></th>
                     </tr>
                   </thead>
@@ -64,7 +65,9 @@
                             <td>
                             	<strong><?php echo e($new->service_name); ?></strong>
                             </td>
-                             
+                             <td>
+                              <strong><?php echo $new->service_description; ?></strong>
+                            </td>
                             <td>
                              	<strong><?php echo e(trans('labels.AddedDate')); ?>: </strong> <?php echo e($new->created_at); ?><br>
                            		<strong><?php echo e(trans('labels.ModifiedDate')); ?>: </strong><?php echo e($new->updated_at); ?>
