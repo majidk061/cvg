@@ -14,7 +14,6 @@
             @endforeach
         @endif
      </div>
-     
   </section><!-- End Hero -->
 
    

@@ -11,11 +11,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="csrf-token" content=<?php echo e(csrf_token()); ?>>
 
-    <title>Admin</title>
+    <title>CVG</title>
     <!-- Bootstrap -->
     
       <!-- Favicons -->
-      <link href="<?php echo e(asset('public/assets/img/favicon.png')); ?>" rel="icon">
+      <link href="<?php echo e(asset('resources/assets/images/site_images/1585476839.CVG_logo.png')); ?>" rel="icon">
       <link href="<?php echo e(asset('public/assets/img/apple-touch-icon.png')); ?>" rel="apple-touch-icon">
 
       <!-- Google Fonts -->

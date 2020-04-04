@@ -1535,7 +1535,7 @@ preview-2
 # Testimonials
 --------------------------------------------------------------*/
 .testimonials-area {
-  background: rgba(0, 0, 0, 0) url("../img/background/slider1.jpg") no-repeat fixed center top/cover;
+  background: rgba(0, 0, 0, 0) url("../img/slider/slider1.jpg") no-repeat fixed center top/cover;
   height: auto;
   width: 100%;
 }
@@ -2606,7 +2606,7 @@ span.email-notes {
 /* small mobile :320px. */
 @media (max-width: 767px) {
   .slider-area {
-    margin-top: 60px;
+    /*margin-top: 60px;*/
   }
   .slider-content {
     padding: 80px 0;

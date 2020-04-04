@@ -7,12 +7,12 @@
 
         <div class="row  justify-content-center">
           <div class="col-lg-6">
-            <h3>Bocor</h3>
-            <div>401 East Olas Blvd.</div>
+            <h3>CVG</h3>
+            <div>{{$result['commonContent']['setting'][4]->value}}</div>
             <div>Ste. 1400, Fort Lauderdale.</div>
-            <div>Florida 33301.</div>
-            <div>Tel: 954-332-2444.</div>
-            <div>cvgmanagement.com</div>
+            <div>{{$result['commonContent']['setting'][5]->value}} {{$result['commonContent']['setting'][6]->value}}, {{$result['commonContent']['setting'][7]->value}} {{$result['commonContent']['setting'][8]->value}}</div>
+            <div>Tel: {{$result['commonContent']['setting'][11]->value}}</div>
+            <div>{{$result['commonContent']['setting'][3]->value}}</div>
           </div>
         </div>
       </div>

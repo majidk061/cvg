@@ -143,77 +143,28 @@ line-height: 1.3;
   </section><!-- End Hero -->
    
   <main id="main">
-    <!-- ======= Clients Section ======= -->
-    <section id="clients" class="clients section-bg">
-      <div class="container">
-
-        <div class="row no-gutters clients-wrap clearfix wow fadeInUp">
-
-          <div class="col-lg-2 col-md-4 col-6">
-            <div class="client-logo">
-              <img src="<?php echo e(asset('public/assets/img/clients/client-1.png')); ?>" class="img-fluid" alt="" data-aos="flip-right">
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6">
-            <div class="client-logo">
-              <img src="<?php echo e(asset('public/assets/img/clients/client-2.png')); ?>" class="img-fluid" alt="" data-aos="flip-right" data-aos-delay="100">
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6">
-            <div class="client-logo">
-              <img src="<?php echo e(asset('public/assets/img/clients/client-3.png')); ?>" class="img-fluid" alt="" data-aos="flip-right" data-aos-delay="200">
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6">
-            <div class="client-logo">
-              <img src="<?php echo e(asset('public/assets/img/clients/client-4.png')); ?>" class="img-fluid" alt="" data-aos="flip-right" data-aos-delay="300">
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6">
-            <div class="client-logo">
-              <img src="<?php echo e(asset('public/assets/img/clients/client-5.png')); ?>" class="img-fluid" alt="" data-aos="flip-right" data-aos-delay="400">
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6">
-            <div class="client-logo">
-              <img src="<?php echo e(asset('public/assets/img/clients/client-6.png')); ?>" class="img-fluid" alt="" data-aos="flip-right" data-aos-delay="500">
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Clients Section -->
+     
+    
     <!-- ======= About Section ======= -->
-    <section id="about" class="about section-bg">
+     
+    <section id="features" class="features section-bg">
       <div class="container">
+
         <div class="section-title">
           <h2 data-aos="fade-in"><?=$result['pages'][0]->name?></h2>
-           
         </div>
-        <div class="row">
-          <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start"></div>
-          <div class="col-xl-7 pl-0 pl-lg-5 pr-lg-1 d-flex align-items-stretch">
-            <div class="content d-flex ">
-               
-               
-              <div class="row">
-                <div class="col-md-12 icon-box" data-aos="fade-up">
-                  <?=stripslashes($result['pages'][0]->description)?> 
-                </div>
-                 
-              </div>
-            </div><!-- End .content-->
+        <div class="row content">
+          <div class="col-md-5 order-2 order-md-1" data-aos="fade-right">
+            <img src="<?php echo e(asset('public/assets/img/Project Managers.webp')); ?>" class="img-fluid" alt="">
           </div>
+          <div class="col-md-7 pt-5 order-1 order-md-2 text-justify" data-aos="fade-left">
+            <?=stripslashes($result['pages'][0]->description)?> 
+          </div>
+          
         </div>
-
       </div>
-    </section><!-- End About Section -->
+    </section>
+    <!-- End About Section -->
     <!-- ======= Frequently Asked Questions Section ======= -->
    <!--  <section id="faq" class="faq section-bg">
       <div class="container">
@@ -271,7 +222,7 @@ line-height: 1.3;
       <div class="work-us">
         <div class="work-left-text">
           <a href="#">
-            <img src="<?php echo e(asset('public/assets/img/Buildings.webp')); ?>" alt="">
+            <img src="<?php echo e(asset('public/assets/img/Children-Impacting life.webp')); ?>" alt="">
           </a>
         </div>
         <div class="work-right-text text-center">
@@ -291,7 +242,7 @@ line-height: 1.3;
         </div>
         <div class="row content">
           <div class="col-md-5 order-1 order-md-2" data-aos="fade-left">
-            <img src="<?php echo e(asset('public/assets/img/features-2.svg')); ?>" class="img-fluid" alt="">
+            <img src="<?php echo e(asset('public/assets/img/our-company.jpg')); ?>" class="img-fluid" alt="">
           </div>
           <div class="col-md-7 pt-5 order-2 order-md-1 text-justify" data-aos="fade-right">
             <?php echo str_limit($result['our_company_pages'][0]->description,1000,'...'); ?>
@@ -475,6 +426,12 @@ line-height: 1.3;
   <?php $__env->stopSection(); ?>
 
   <?php $__env->startSection('javascript'); ?>
+  <script type="text/javascript">
+   var width = screen.width;
+    if(width>768){
+      document.getElementById('ensign-nivoslider').style.height ="500px";
+    }
+ </script>
   <script src="<?php echo e(asset('public/new/assets/vendor/jquery.easing/jquery.easing.min.js')); ?>"></script>
   <script src="<?php echo e(asset('public/new/assets/vendor/php-email-form/validate.js')); ?>"></script>
   <script src="<?php echo e(asset('public/new/assets/vendor/appear/jquery.appear.js')); ?>"></script>
