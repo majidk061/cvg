@@ -5,7 +5,7 @@
   <section class="content-header">
     <h1> {{ trans('labels.SendNotification') }} <small>{{ trans('labels.SendNotification') }}...</small> </h1>
     <ol class="breadcrumb">
-      <li><a href="{{ URL::to('admin/dashboard/this_month') }}"><i class="fa fa-dashboard"></i> {{ trans('labels.breadcrumb_dashboard') }}</a></li>
+      <li><a href="#"><i class="fa fa-dashboard"></i> {{ trans('labels.breadcrumb_dashboard') }}</a></li>
       <li class="active">{{ trans('labels.SendNotification') }}</li>
     </ol>
   </section>
@@ -120,7 +120,7 @@
 							<!-- /.box-body -->
 							<div class="box-footer text-center">
 								<button type="submit" class="btn btn-primary">{{ trans('labels.Send') }} </button>
-								<a href="{{ URL::to('admin/dashboard/this_month') }}" type="button" class="btn btn-default">{{ trans('labels.back') }}</a>
+								<a href="#" type="button" class="btn btn-default">{{ trans('labels.back') }}</a>
 							</div>
                               <!-- /.box-footer -->
                             {!! Form::close() !!}

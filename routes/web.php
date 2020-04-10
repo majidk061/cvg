@@ -34,25 +34,14 @@ header('Access-Control-Allow-Headers:  Content-Type, X-Auth-Token, Origin, Autho
 |
 */
 
-Route::get('/clear-cache', function() {
-	$exitCode = Artisan::call('cache:clear');
-});
-
-Route::get('/config-cache', function() {
-	$exitCode = Artisan::call('config:cache');
-});
-
-Route::get('/key-genrate', function() {
-	$exitCode = Artisan::call('key:generate');
-});
+ 
 
 Route::group(['prefix' => 'admin'], function () {
 	
 	Route::group(['namespace' => 'Admin'], function () {
 
 		Route::group(['middleware' => 'admin'], function () {
-			Route::get('/dashboard/{reportBase}', 'AdminController@dashboard');
-			Route::get('/post', 'AdminController@myPost');
+			 
 			//show admin personal info record
 			Route::get('/adminInfo', 'AdminController@adminInfo');
 
@@ -90,175 +79,13 @@ Route::group(['prefix' => 'admin'], function () {
 			Route::get('/deletesubcategory/{id}', 'AdminCategoriesController@deletesubcategory');
 			
 			Route::post('/getajaxcategories', 'AdminCategoriesController@getajaxcategories');
-
-			//products
-			Route::get('/products', 'AdminProductsController@products');
-			Route::get('/addproduct', 'AdminProductsController@addproduct');
-			Route::post('/addnewproduct', 'AdminProductsController@addnewproduct');
-
-			//add attribute against newly added product
-			Route::get('/addproductattribute/{id}/', 'AdminProductsController@addproductattribute');
-			Route::get('/addinventory/{id}/', 'AdminProductsController@addinventory');
-			Route::post('/currentstock', 'AdminProductsController@currentstock');
-			Route::post('/addnewstock', 'AdminProductsController@addnewstock');
-			Route::post('/addminmax', 'AdminProductsController@addminmax');			
-			Route::get('/addproductimages/{id}/', 'AdminProductsController@addproductimages');
-			Route::post('/addnewdefaultattribute', 'AdminProductsController@addnewdefaultattribute');
-			Route::post('/addnewproductattribute', 'AdminProductsController@addnewproductattribute');
-			Route::post('/updateproductattribute', 'AdminProductsController@updateproductattribute');
-			Route::post('/updatedefaultattribute', 'AdminProductsController@updatedefaultattribute');
-			Route::post('/deleteproduct', 'AdminProductsController@deleteproduct');
-			Route::post('/deleteproductattribute', 'AdminProductsController@deleteproductattribute');
-			Route::post('/addnewproductimage', 'AdminProductsController@addnewproductimage');
-			Route::post('/deletedefaultattribute', 'AdminProductsController@deletedefaultattribute');
-			Route::post('editproductattribute', 'AdminProductsController@editproductattribute');
-			Route::post('editdefaultattribute', 'AdminProductsController@editdefaultattribute');
-			Route::post('addnewproductimagemodal', 'AdminProductsController@addnewproductimagemodal');
-			Route::post('deleteproductattributemodal', 'AdminProductsController@deleteproductattributemodal');
-			Route::post('deletedefaultattributemodal', 'AdminProductsController@deletedefaultattributemodal');
-
-			//product attribute
-			Route::post('/addnewproductimage', 'AdminProductsController@addnewproductimage');
-			Route::post('editproductimage', 'AdminProductsController@editproductimage');
-			Route::post('/updateproductimage', 'AdminProductsController@updateproductimage');
-			Route::post('/deleteproductimagemodal', 'AdminProductsController@deleteproductimagemodal');
-			Route::post('/deleteproductimage', 'AdminProductsController@deleteproductimage');
-			Route::get('/editproduct/{id}', 'AdminProductsController@editproduct');
-			Route::post('/updateproduct', 'AdminProductsController@updateproduct');	
-			Route::post('/getOptions', 'AdminProductsController@getOptions');	
-			Route::post('/getOptionsValue', 'AdminProductsController@getOptionsValue');	
-
-
-			//Attribute
-			Route::get('/attributes', 'AdminProductsController@attributes');
-			Route::get('/addoptions', 'AdminProductsController@addoptions');
-			Route::post('/addnewoptions', 'AdminProductsController@addnewoptions');
-			//
-			Route::post('/addnewattributes', 'AdminProductsController@addnewattributes');
-			//Route::get('/editattributes/{id}/{language_id}', 'AdminProductsController@editattributes');
-			Route::get('/manage-options/{id}', 'AdminProductsController@manageoptions');
-			Route::get('/edit-values/{id}', 'AdminProductsController@editvalues');
-			Route::post('/updatevalue', 'AdminProductsController@updatevalue');
-			Route::post('/addnewvalues', 'AdminProductsController@addnewvalues');
-			
-				
-			Route::get('/manage-options-values/{id}', 'AdminProductsController@manageoptionsvalues');
-			Route::post('/updateoptions/', 'AdminProductsController@updateoptions');
-			Route::post('/deleteattribute', 'AdminProductsController@deleteattribute');
-			Route::post('/addattributevalue', 'AdminProductsController@addattributevalue');
-			Route::post('/updateattributevalue', 'AdminProductsController@updateattributevalue');
-			Route::post('/checkattributeassociate', 'AdminProductsController@checkattributeassociate');
-			Route::post('/checkvalueassociate', 'AdminProductsController@checkvalueassociate');
-			Route::post('/deletevalue', 'AdminProductsController@deletevalue');
-
-
-			//manageAppLabel
-			Route::get('/listingAppLabels', 'AdminAppLabelsController@listingAppLabels');
-			Route::get('/addappkey', 'AdminAppLabelsController@addappkey');
-			Route::post('/addNewAppLabel', 'AdminAppLabelsController@addNewAppLabel');
-			Route::get('/editAppLabel/{id}', 'AdminAppLabelsController@editAppLabel');
-			Route::post('/updateAppLabel/', 'AdminAppLabelsController@updateAppLabel');
-			Route::get('/applabel', 'AdminAppLabelsController@manageAppLabel');
-
-
-			//customers
-			Route::get('/customers', 'AdminCustomersController@customers');
-			Route::get('/addcustomers', 'AdminCustomersController@addcustomers');
-			Route::post('/addnewcustomers', 'AdminCustomersController@addnewcustomers');
-
-
-			//add adddresses against customers
-			Route::get('/addaddress/{id}/', 'AdminCustomersController@addaddress');
-			Route::post('/addNewCustomerAddress', 'AdminCustomersController@addNewCustomerAddress');
-			Route::post('/editAddress', 'AdminCustomersController@editAddress');
-			Route::post('/updateAddress', 'AdminCustomersController@updateAddress');
-			Route::post('/deleteAddress', 'AdminCustomersController@deleteAddress');
-			Route::post('/getZones', 'AddressController@getZones');
-			//edit customer
-			Route::get('/editcustomers/{id}', 'AdminCustomersController@editcustomers');
-			Route::post('/updatecustomers', 'AdminCustomersController@updatecustomers');
-			Route::post('/deletecustomers', 'AdminCustomersController@deletecustomers');
-
-			//orders
-			Route::get('/orders', 'AdminOrdersController@orders');		
-			Route::get('/vieworder/{id}', 'AdminOrdersController@vieworder');
-			Route::post('/updateOrder', 'AdminOrdersController@updateOrder');
-			Route::post('/deleteOrder', 'AdminOrdersController@deleteOrder');
-			Route::get('/invoiceprint/{id}', 'AdminOrdersController@invoiceprint');	
+  
 			
 			//alert setting
 			Route::get('/alertsetting', 'AdminSiteSettingController@alertSetting');
 			Route::post('/updateAlertSetting', 'AdminSiteSettingController@updateAlertSetting');
 			
-			//generate application key
-			Route::get('/generateKey', 'AdminSiteSettingController@generateKey');
-
-			//countries
-			Route::get('/countries', 'AdminTaxController@countries');
-			Route::get('/addcountry', 'AdminTaxController@addcountry');
-			Route::post('/addnewcountry', 'AdminTaxController@addnewcountry');
-			Route::get('/editcountry/{id}', 'AdminTaxController@editcountry');
-			Route::post('/updatecountry', 'AdminTaxController@updatecountry');
-			Route::post('/deletecountry', 'AdminTaxController@deletecountry');
-
-			//zones
-			Route::get('/listingZones', 'AdminTaxController@listingZones');
-			Route::get('/addZone', 'AdminTaxController@addZone');
-			Route::post('/addNewZone', 'AdminTaxController@addNewZone');
-			Route::get('/editZone/{id}', 'AdminTaxController@editZone');
-			Route::post('/updateZone', 'AdminTaxController@updateZone');
-			Route::post('/deleteZone', 'AdminTaxController@deleteZone');
-
-			//tax class
-			Route::get('/taxclass', 'AdminTaxController@taxclass');
-			Route::get('/addtaxclass', 'AdminTaxController@addtaxclass');
-			Route::post('/addnewtaxclass', 'AdminTaxController@addnewtaxclass');
-			Route::get('/edittaxclass/{id}', 'AdminTaxController@edittaxclass');
-			Route::post('/updatetaxclass', 'AdminTaxController@updatetaxclass');
-			Route::post('/deletetaxclass', 'AdminTaxController@deletetaxclass');
-
-			//tax rate
-			Route::get('/taxrates', 'AdminTaxController@taxrates');
-			Route::get('/addtaxrate', 'AdminTaxController@addtaxrate');
-			Route::post('/addnewtaxrate', 'AdminTaxController@addnewtaxrate');
-			Route::get('/edittaxrate/{id}', 'AdminTaxController@edittaxrate');
-			Route::post('/updatetaxrate', 'AdminTaxController@updatetaxrate');
-			Route::post('/deletetaxrate', 'AdminTaxController@deletetaxrate');
-
-			//shipping setting
-			Route::get('/shippingmethods', 'AdminShippingController@shippingmethods');
-			Route::get('/upsShipping', 'AdminShippingController@upsShipping');
-			Route::post('/updateupsshipping', 'AdminShippingController@updateupsshipping');
-			Route::get('/flateRate', 'AdminShippingController@flateRate');
-			Route::post('/updateflaterate', 'AdminShippingController@updateflaterate');
-			Route::post('/defaultShippingMethod', 'AdminShippingController@defaultShippingMethod');
-			Route::get('/shippingDetail/{table_name}', 'AdminShippingController@shippingDetail');
-			Route::post('/updateShipping', 'AdminShippingController@updateShipping');
-			
-			//shppingbyprice
-			Route::get('/shppingbyweight', 'AdminShippingByWeightController@shppingbyweight');
-			Route::post('/updateShppingWeightPrice', 'AdminShippingByWeightController@updateShppingWeightPrice');
-			
-			
-			//Payment setting
-			Route::get('/paymentsetting', 'AdminPaymentController@paymentsetting');
-			Route::post('/updatePaymentSetting', 'AdminPaymentController@updatePaymentSetting');
-
-			//orders
-			Route::get('/orderstatus', 'AdminSiteSettingController@orderstatus');
-			Route::get('/addorderstatus', 'AdminSiteSettingController@addorderstatus');
-			Route::post('/addNewOrderStatus', 'AdminSiteSettingController@addNewOrderStatus');
-			Route::get('/editorderstatus/{id}', 'AdminSiteSettingController@editorderstatus');
-			Route::post('/updateOrderStatus', 'AdminSiteSettingController@updateOrderStatus');
-			Route::post('/deleteOrderStatus', 'AdminSiteSettingController@deleteOrderStatus');
-			
-			//units
-			Route::get('/units', 'AdminSiteSettingController@units');
-			Route::get('/addunit', 'AdminSiteSettingController@addunit');
-			Route::post('/addnewunit', 'AdminSiteSettingController@addnewunit');
-			Route::get('/editunit/{id}', 'AdminSiteSettingController@editunit');
-			Route::post('/updateunit', 'AdminSiteSettingController@updateunit');
-			Route::post('/deleteunit', 'AdminSiteSettingController@deleteunit');
+			        
 			
 			//setting page
 			Route::get('/setting', 'AdminSiteSettingController@setting');
@@ -277,8 +104,7 @@ Route::group(['prefix' => 'admin'], function () {
 			Route::post('/updateWebTheme', 'AdminSiteSettingController@updateWebTheme');
 			Route::get('/mailchimp', 'AdminSiteSettingController@mailchimp');			
 			
-			//pushNotification
-			Route::get('/pushnotification', 'AdminSiteSettingController@pushNotification');	
+			 
 			
 			//language setting
 			Route::get('/getlanguages', 'AdminSiteSettingController@getlanguages');
@@ -318,34 +144,7 @@ Route::group(['prefix' => 'admin'], function () {
 			Route::get('/profile', 'AdminController@adminProfile');
 			Route::post('/updateProfile', 'AdminController@updateProfile');
 			Route::post('/updateAdminPassword', 'AdminController@updateAdminPassword');
-
-			//reports 
-			Route::get('/statscustomers', 'AdminReportsController@statsCustomers');
-			Route::get('/statsproductspurchased', 'AdminReportsController@statsProductsPurchased');
-			Route::get('/statsproductsliked', 'AdminReportsController@statsProductsLiked');
-			Route::get('/outofstock', 'AdminReportsController@outofstock');
-			Route::get('/lowinstock', 'AdminReportsController@lowinstock');			
-			Route::get('/stockin', 'AdminReportsController@stockin');
-			Route::post('/productSaleReport', 'AdminReportsController@productSaleReport');
-
-			//Devices and send notification
-			Route::get('/devices', 'AdminNotificationController@devices');
-			Route::get('/viewdevices/{id}', 'AdminNotificationController@viewdevices');
-			Route::post('/notifyUser/', 'AdminNotificationController@notifyUser');
-			Route::get('/notifications/', 'AdminNotificationController@notifications');
-			Route::post('/sendNotifications/', 'AdminNotificationController@sendNotifications');
-			Route::post('/customerNotification/', 'AdminNotificationController@customerNotification');
-			Route::post('/singleUserNotification/', 'AdminNotificationController@singleUserNotification');
-			Route::post('/deletedevice/', 'AdminNotificationController@deletedevice');
-
-			//coupons
-			Route::get('/coupons', 'AdminCouponsController@coupons');
-			Route::get('/addcoupons', 'AdminCouponsController@addcoupons');
-			Route::post('/addnewcoupons', 'AdminCouponsController@addnewcoupons');
-			Route::get('/editcoupons/{id}', 'AdminCouponsController@editcoupons');
-			Route::post('/updatecoupons', 'AdminCouponsController@updatecoupons');
-			Route::post('/deletecoupon', 'AdminCouponsController@deletecoupon');
-			Route::post('/couponProducts', 'AdminCouponsController@couponProducts');
+   
 
 			//news categories
 			Route::get('/newscategories', 'AdminNewsCategoriesController@newscategories');
@@ -403,32 +202,7 @@ Route::group(['prefix' => 'admin'], function () {
 			Route::post('/updatewebpage', 'AdminPagesController@updatewebpage');
 			Route::get('/pageWebStatus', 'AdminPagesController@pageWebStatus');	
 			
-			//admin managements			
-			Route::get('/admins', 'AdminController@admins');
-			Route::get('/addadmins', 'AdminController@addadmins');
-			Route::post('/addnewadmin', 'AdminController@addnewadmin');
-			Route::get('/editadmin/{id}', 'AdminController@editadmin');
-			Route::post('/updateadmin', 'AdminController@updateadmin');
-			Route::post('/deleteadmin', 'AdminController@deleteadmin');
-			
-			//admin managements			
-			Route::get('/manageroles', 'AdminController@manageroles');
-			Route::get('/addadmintype', 'AdminController@addadmintype');
-			Route::post('/addnewtype', 'AdminController@addnewtype');
-			Route::get('/editadmintype/{id}', 'AdminController@editadmintype');
-			Route::post('/updatetype', 'AdminController@updatetype');
-			Route::post('/deleteadmintype', 'AdminController@deleteadmintype');
-			Route::get('/addrole/{id}', 'AdminController@addrole');
-			Route::post('/addnewroles', 'AdminController@addnewroles');		
-			
-			
-			//extra roles
-			Route::get('/categoriesroles', 'AdminController@categoriesRoles');
-			Route::get('/addcategoriesroles', 'AdminController@addCategoriesRoles');
-			Route::post('/addnewcategoriesroles', 'AdminController@addNewCategoriesRoles');
-			Route::get('/editcategoriesroles/{id}', 'AdminController@editCategoriesRoles');
-			Route::post('/updatecategoriesroles', 'AdminController@updateCategoriesRoles');
-			Route::get('/deletecategoriesroles/{id}', 'AdminController@deleteCategoriesRoles');
+			  
 
 		});
 

@@ -5,7 +5,7 @@
   <section class="content-header">
     <h1> Edit Label <small>Edit Label...</small> </h1>
     <ol class="breadcrumb">
-       <li><a href="{{ URL::to('admin/dashboard/this_month') }}"><i class="fa fa-dashboard"></i> {{ trans('labels.breadcrumb_dashboard') }}</a></li>
+       <li><a href="#"><i class="fa fa-dashboard"></i> {{ trans('labels.breadcrumb_dashboard') }}</a></li>
       <li><a href="{{ URL::to('admin/listingAppLabels')}}"><i class="fa fa-bars"></i> List All Labels</a></li>
       <li class="active">Edit Label</li>
     </ol>

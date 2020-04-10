@@ -5,7 +5,7 @@
   <section class="content-header">
     <h1> {{ trans('labels.AddConstantBanner') }} <small>{{ trans('labels.AddConstantBanner') }}...</small> </h1>
     <ol class="breadcrumb">
-      <li><a href="{{ URL::to('admin/dashboard/this_month') }}"><i class="fa fa-dashboard"></i> {{ trans('labels.breadcrumb_dashboard') }}</a></li>
+      <li><a href="#"><i class="fa fa-dashboard"></i> {{ trans('labels.breadcrumb_dashboard') }}</a></li>
       <li><a href="{{ URL::to('admin/constantbanners')}}"><i class="fa fa-bars"></i> {{ trans('labels.ListingConstantBanners') }}</a></li>
       <li class="active">{{ trans('labels.AddConstantBanner') }}</li>
     </ol>

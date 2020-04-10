@@ -5,7 +5,7 @@
   <section class="content-header">
     <h1> {{ trans('labels.Add Roles') }} <small>{{ trans('labels.Add Roles') }}...</small> </h1>
     <ol class="breadcrumb">
-       <li><a href="{{ URL::to('admin/dashboard/this_month') }}"><i class="fa fa-dashboard"></i> {{ trans('labels.breadcrumb_dashboard') }}</a></li>
+       <li><a href="#"><i class="fa fa-dashboard"></i> {{ trans('labels.breadcrumb_dashboard') }}</a></li>
        <li><a href="{{ URL::to('admin/manageroles')}}"><i class="fa fa-users"></i> {{ trans('labels.manageroles') }}</a></li>
       <li class="active">{{ trans('labels.Add Roles') }}</li>
     </ol>

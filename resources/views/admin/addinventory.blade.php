@@ -5,7 +5,7 @@
   <section class="content-header">
     <h1> {{ trans('labels.Inventory') }} <small>{{ trans('labels.Inventory') }}...</small> </h1>
     <ol class="breadcrumb">
-      <li><a href="{{ URL::to('admin/dashboard/this_month') }}"><i class="fa fa-dashboard"></i> {{ trans('labels.breadcrumb_dashboard') }}</a></li>
+      <li><a href="#"><i class="fa fa-dashboard"></i> {{ trans('labels.breadcrumb_dashboard') }}</a></li>
       <li><a href="{{ URL::to('admin/products') }}">{{ trans('labels.ListingAllProducts') }}</a></li>
       @if($result['products'][0]->products_type==1)
       <li><a href="{{ URL::to('admin/addproductattribute/'.$result['products'][0]->products_id) }}">{{ trans('labels.AddOptions') }}</a></li>

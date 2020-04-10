@@ -5,7 +5,7 @@
   <section class="content-header">
     <h1> {{ trans('labels.shppingbyweight') }}<small>{{ trans('labels.shppingbyweight') }}...</small> </h1>
     <ol class="breadcrumb">
-       <li><a href="{{ URL::to('admin/dashboard/this_month') }}"><i class="fa fa-dashboard"></i> {{ trans('labels.breadcrumb_dashboard') }}</a></li>
+       <li><a href="#"><i class="fa fa-dashboard"></i> {{ trans('labels.breadcrumb_dashboard') }}</a></li>
       <li><a href="{{ URL::to('admin/shippingmethods')}}"><i class="fa fa-dashboard"></i>{{ trans('labels.ShippingMethods') }}</a></li>
       <li class="active">{{ trans('labels.shppingbyweight') }}</li>
     </ol>

@@ -5,7 +5,7 @@
   <section class="content-header">
     <h1> {{ trans('labels.EditNewsCategories') }} <small>{{ trans('labels.EditNewsCategories') }}...</small> </h1>
     <ol class="breadcrumb">
-       <li><a href="{{ URL::to('admin/dashboard/this_month') }}"><i class="fa fa-dashboard"></i> {{ trans('labels.breadcrumb_dashboard') }}</a></li>
+       <li><a href="#"><i class="fa fa-dashboard"></i> {{ trans('labels.breadcrumb_dashboard') }}</a></li>
       <li><a href="{{ URL::to('admin/newscategories')}}"><i class="fa fa-bars"></i> {{ trans('labels.Categories') }}</a></li>
       <li class="active">{{ trans('labels.EditNewsCategories') }}</li>
     </ol>
