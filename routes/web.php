@@ -54,13 +54,7 @@ Route::group(['prefix' => 'admin'], function () {
 		| 
 		|
 		*/
-			//main listingManufacturer
-			Route::get('/manufacturers', 'AdminManufacturerController@manufacturers');
-			Route::get('/addmanufacturer', 'AdminManufacturerController@addmanufacturer');
-			Route::post('/addnewmanufacturer', 'AdminManufacturerController@addnewmanufacturer');
-			Route::get('/editmanufacturer/{id}', 'AdminManufacturerController@editmanufacturer');
-			Route::post('/updatemanufacturer', 'AdminManufacturerController@updatemanufacturer');
-			Route::post('/deletemanufacturer', 'AdminManufacturerController@deletemanufacturer');
+			 
 
 			//main categories
 			Route::get('/categories', 'AdminCategoriesController@categories');

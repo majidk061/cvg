@@ -23,13 +23,7 @@
         </li>
         @endif 
         
-        @if(session('manufacturer_view')==1  or auth()->guard('admin')->user()->adminType=='1')
-        <li class="treeview {{ Request::is('admin/manufacturers') ? 'active' : '' }} {{ Request::is('admin/addmanufacturer') ? 'active' : '' }} {{ Request::is('admin/editmanufacturer/*') ? 'active' : '' }} ">
-          <a href="{{ URL::to('admin/manufacturers')}}">
-            <i class="fa fa-industry" aria-hidden="true"></i> <span>{{ trans('labels.link_manufacturer') }}</span>
-          </a>
-        </li>
-        @endif
+         
         @if(session('categories_view')==1  or auth()->guard('admin')->user()->adminType=='1')
         <li class="treeview {{ Request::is('admin/categories') ? 'active' : '' }} {{ Request::is('admin/addcategory') ? 'active' : '' }} {{ Request::is('admin/editcategory/*') ? 'active' : '' }} {{ Request::is('admin/subcategories') ? 'active' : '' }}  {{ Request::is('admin/addsubcategory') ? 'active' : '' }}  {{ Request::is('admin/editsubcategory/*') ? 'active' : '' }}">
           <a href="#">

@@ -3870,7 +3870,7 @@ INSERT INTO `settings` (`id`, `name`, `value`, `created_at`, `updated_at`) VALUE
 (68, 'is_desktop_purchased', '1', NULL, '2018-05-03 22:24:44'),
 (69, 'consumer_key', '6df56cf915318431043dd7a75d', NULL, '2018-07-17 03:58:24'),
 (70, 'consumer_secret', '95032b42153184310488f5fb8f', NULL, '2018-07-17 03:58:24'),
-(71, 'order_email', 'hello@stylekart.co', NULL, '2020-03-29 04:43:59'),
+(71, 'order_email', 'hello@cvg.co', NULL, '2020-03-29 04:43:59'),
 (72, 'website_themes', '1', NULL, NULL),
 (73, 'seo_title', 'Skylekart, Fashion for everyone', NULL, '2019-08-29 10:03:21'),
 (74, 'seo_metatag', 'Skylekart, Fashion for everyone', NULL, '2019-08-29 10:03:21'),

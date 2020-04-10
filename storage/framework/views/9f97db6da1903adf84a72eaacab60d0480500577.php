@@ -4,7 +4,7 @@
   <section class="content-header">
     <h1> <?php echo e(trans('labels.EditManufacturer')); ?>  <small><?php echo e(trans('labels.EditManufacturer')); ?>...</small> </h1>
     <ol class="breadcrumb">
-       <li><a href="<?php echo e(URL::to('admin/dashboard/this_month')); ?>"><i class="fa fa-dashboard"></i> <?php echo e(trans('labels.breadcrumb_dashboard')); ?></a></li>
+       <li><a href="#"><i class="fa fa-dashboard"></i> <?php echo e(trans('labels.breadcrumb_dashboard')); ?></a></li>
       <li><a href="<?php echo e(URL::to('admin/listingManufacturer')); ?>"><i class="fa fa-dashboard"></i> <?php echo e(trans('labels.ListAllManufacturer')); ?></a></li>
       <li class="active"><?php echo e(trans('labels.EditManufacturer')); ?></li>
     </ol>

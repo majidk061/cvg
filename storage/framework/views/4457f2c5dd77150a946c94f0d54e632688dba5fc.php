@@ -23,13 +23,7 @@
         </li>
         <?php endif; ?> 
         
-        <?php if(session('manufacturer_view')==1  or auth()->guard('admin')->user()->adminType=='1'): ?>
-        <li class="treeview <?php echo e(Request::is('admin/manufacturers') ? 'active' : ''); ?> <?php echo e(Request::is('admin/addmanufacturer') ? 'active' : ''); ?> <?php echo e(Request::is('admin/editmanufacturer/*') ? 'active' : ''); ?> ">
-          <a href="<?php echo e(URL::to('admin/manufacturers')); ?>">
-            <i class="fa fa-industry" aria-hidden="true"></i> <span><?php echo e(trans('labels.link_manufacturer')); ?></span>
-          </a>
-        </li>
-        <?php endif; ?>
+         
         <?php if(session('categories_view')==1  or auth()->guard('admin')->user()->adminType=='1'): ?>
         <li class="treeview <?php echo e(Request::is('admin/categories') ? 'active' : ''); ?> <?php echo e(Request::is('admin/addcategory') ? 'active' : ''); ?> <?php echo e(Request::is('admin/editcategory/*') ? 'active' : ''); ?> <?php echo e(Request::is('admin/subcategories') ? 'active' : ''); ?>  <?php echo e(Request::is('admin/addsubcategory') ? 'active' : ''); ?>  <?php echo e(Request::is('admin/editsubcategory/*') ? 'active' : ''); ?>">
           <a href="#">
