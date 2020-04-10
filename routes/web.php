@@ -243,10 +243,7 @@ Route::post('/language/', array(
 	'uses' => 'WebSettingController@changeLanguage'
 	));
 		
-	Route::get('/setStyle', 'DefaultController@setStyle');
-	Route::get('/settheme', 'DefaultController@settheme');
-	Route::get('/page', 'DefaultController@page');
-	Route::post('/subscribeNotification/', 'CustomersController@subscribeNotification');
+	 
 	
 	/*
 	|--------------------------------------------------------------------------
@@ -286,94 +283,7 @@ Route::post('/language/', array(
 	Route::post('/loadMoreNews', 'NewsController@loadMoreNews');	
 	
 	
-	Route::get('/clear-cache', function() {
-		$exitCode = Artisan::call('cache:clear');
-	});
-	
-	/*
-	|--------------------------------------------------------------------------
-	| categories / products Controller Routes
-	|--------------------------------------------------------------------------
-	|
-	| This section contains all Routes of categories page, products/shop page, product detail. 
-	| 
-	|
-	*/
-	
-	Route::get('/shop', 'ProductsController@shop');
-	Route::post('/shop', 'ProductsController@shop');
-	Route::get('/product-detail/{slug}', 'ProductsController@productDetail');
-	Route::post('/filterProducts', 'ProductsController@filterProducts');
-	
-	
-	/*
-	|--------------------------------------------------------------------------
-	| Cart Controller Routes
-	|--------------------------------------------------------------------------
-	|
-	| This section contains customer cart products
-	| 
-	*/
-
-	Route::get('/getCart', 'DataController@getCart');
-	
-	//getquantity
-	Route::post('/getquantity', 'ProductsController@getquantity');
-	
-	
-	Route::post('/addToCart', 'CartController@addToCart');
-	Route::post('/updatesinglecart', 'CartController@updatesinglecart');
-	Route::get('/cartButton', 'CartController@cartButton');
-	
-	Route::get('/viewcart', 'CartController@viewcart');
-	Route::get('/editcart', 'CartController@editcart');
-	
-	Route::post('/updateCart', 'CartController@updateCart');
-	Route::get('/deleteCart', 'CartController@deleteCart');
-	Route::post('/apply_coupon', 'CartController@apply_coupon');
-	Route::get('/removeCoupon/{id}', 'CartController@removeCoupon');
-		
-	/*
-	|--------------------------------------------------------------------------
-	| customer registrations Controller Routes
-	|--------------------------------------------------------------------------
-	|
-	| This section contains all Routes of signup page, login page, forgot password 
-	| facebook login , google login, shipping address etc.
-	|
-	*/
-	
-	Route::get('/login', 'CustomersController@login');
-	Route::get('/signup', 'CustomersController@signup');
-	Route::post('/process-login', 'CustomersController@processLogin');
-	Route::get('/logout', 'CustomersController@logout');
-	Route::post('/signupProcess', 'CustomersController@signupProcess');
-	Route::get('/forgotPassword', 'CustomersController@forgotPassword');
-	Route::get('/recoverPassword', 'CustomersController@recoverPassword');
-	Route::post('/processPassword', 'CustomersController@processPassword');
-	
-	
-	Route::get('login/{social}', 'CustomersController@socialLogin');
-	Route::get('login/{social}/callback', 'CustomersController@handleSocialLoginCallback');
-	Route::post('/commentsOrder', 'OrdersController@commentsOrder');
-	
-	//zones
-	Route::post('/ajaxZones', 'ShippingAddressController@ajaxZones');
-	
-	//likeMyProduct
-	Route::post('likeMyProduct', 'CustomersController@likeMyProduct');
-	
-	//subscribe mailchimp
-	Route::get('subscribe', 'WebSettingController@subscribe');
-	/*
-	|--------------------------------------------------------------------------
-	| WEbiste auth path Controller Routes
-	|--------------------------------------------------------------------------
-	|
-	| This section contains all Routes of After login 
-	| 
-	|
-	*/
+	 
 		
 	
 });
