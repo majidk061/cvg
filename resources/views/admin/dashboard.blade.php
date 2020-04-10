@@ -140,7 +140,7 @@
             <ul class="nav nav-tabs">
               <li class="{{ Request::is('admin/dashboard/last_year') ? 'active' : '' }}"><a href="{{ URL::to('admin/dashboard/last_year')}}">{{ trans('labels.lastYear') }}</a></li>
               <li class="{{ Request::is('admin/dashboard/last_month') ? 'active' : '' }}"><a href="{{ URL::to('admin/dashboard/last_month')}}">{{ trans('labels.LastMonth') }}</a></li>
-              <li class="{{ Request::is('admin/dashboard/this_month') ? 'active' : '' }}"><a href="{{ URL::to('admin/dashboard/this_month')}}">{{ trans('labels.thisMonth') }}</a></li>
+              <li class="{{ Request::is('admin/dashboard/this_month') ? 'active' : '' }}"><a href="{{ URL::to('admin/newscategories')}}">{{ trans('labels.thisMonth') }}</a></li>
               <li style="width: 33%"><a href="#" data-toggle="tab">
                   <div class="input-group ">
                   	 <div class="input-group-btn">

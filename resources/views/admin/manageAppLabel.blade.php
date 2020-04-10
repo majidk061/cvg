@@ -104,7 +104,7 @@
                                                                 
                               <!-- /.box-body -->
                               <div class="box-footer text-center">
-                                <a href="{{ URL::to('admin/dashboard/this_month')}}" type="button" class="pull-left btn btn-default">{{ trans('labels.back') }}</a>
+                                <a href="{{ URL::to('admin/newscategories')}}" type="button" class="pull-left btn btn-default">{{ trans('labels.back') }}</a>
                                 <button type="submit" class="btn btn-primary pull-right">{{ trans('labels.UpdateLabel') }}</button>
                               </div>
                               <!-- /.box-footer -->

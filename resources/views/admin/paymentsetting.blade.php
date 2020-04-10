@@ -5,7 +5,7 @@
   <section class="content-header">
     <h1>{{ trans('labels.PaymentSetting') }} <small>{{ trans('labels.PaymentSetting') }}...</small> </h1>
     <ol class="breadcrumb">
-      <li><a href="{{ URL::to('admin/dashboard/this_month')}}"><i class="fa fa-dashboard"></i> {{ trans('labels.breadcrumb_dashboard') }}</a></li>
+      <li><a href="{{ URL::to('admin/newscategories')}}"><i class="fa fa-dashboard"></i> {{ trans('labels.breadcrumb_dashboard') }}</a></li>
       <li class="active">{{ trans('labels.PaymentSetting') }}</li>
     </ol>
   </section>
@@ -395,7 +395,7 @@
 							<!-- /.box-body -->
 							<div class="box-footer text-center">
 								<button type="submit" class="btn btn-primary payment-checkbox">{{ trans('labels.Update') }} </button>
-								<a href="{{ URL::to('admin/dashboard/this_month')}}" type="button" class="btn btn-default">{{ trans('labels.back') }}</a>
+								<a href="{{ URL::to('admin/newscategories')}}" type="button" class="btn btn-default">{{ trans('labels.back') }}</a>
 							</div>
                               <!-- /.box-footer -->
                             {!! Form::close() !!}

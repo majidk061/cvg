@@ -5,7 +5,7 @@
   <section class="content-header">
     <h1> {{ trans('labels.FlateRateSetting') }} <small>{{ trans('labels.Setting') }}...</small> </h1>
     <ol class="breadcrumb">
-       <li><a href="{{ URL::to('admin/dashboard/this_month')}}"><i class="fa fa-dashboard"></i> {{ trans('labels.breadcrumb_dashboard') }}</a></li>
+       <li><a href="{{ URL::to('admin/newscategories')}}"><i class="fa fa-dashboard"></i> {{ trans('labels.breadcrumb_dashboard') }}</a></li>
       <li><a href="{{ URL::to("admin/shippingmethods")}}"><i class="fa fa-dashboard"></i>{{ trans('labels.ShippingMethods') }}</a></li>
       <li class="active">{{ trans('labels.FlateRateSetting') }}</li>
     </ol>

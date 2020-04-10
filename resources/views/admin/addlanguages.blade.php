@@ -5,7 +5,7 @@
   <section class="content-header">
     <h1> {{ trans('labels.AddLanguage') }} <small>{{ trans('labels.AddLanguage') }}...</small> </h1>
     <ol class="breadcrumb">
-      <li><a href="{{ URL::to('admin/dashboard/this_month')}}"><i class="fa fa-dashboard"></i> {{ trans('labels.breadcrumb_dashboard') }}</a></li>
+      <li><a href="{{ URL::to('admin/newscategories')}}"><i class="fa fa-dashboard"></i> {{ trans('labels.breadcrumb_dashboard') }}</a></li>
       <li><a href="{{ URL::to('admin/languages')}}"><i class="fa fa-dashboard"></i>Listing All Languages</a></li>
       <li class="active">{{ trans('labels.AddLanguage') }}</li>
     </ol>
