@@ -5,7 +5,7 @@
   <section class="content-header">
     <h1> <?php echo e(trans('labels.EditSliderImage')); ?> <small><?php echo e(trans('labels.EditSliderImage')); ?>...</small> </h1>
     <ol class="breadcrumb">
-       <li><a href="<?php echo e(URL::to('admin/dashboard/this_month')); ?>"><i class="fa fa-dashboard"></i> <?php echo e(trans('labels.breadcrumb_dashboard')); ?></a></li>
+       <li><a href="#"><i class="fa fa-dashboard"></i> <?php echo e(trans('labels.breadcrumb_dashboard')); ?></a></li>
       <li><a href="<?php echo e(URL::to('admin/sliders')); ?>"><i class="fa fa-bars"></i> <?php echo e(trans('labels.Sliders')); ?></a></li>
       <li class="active"><?php echo e(trans('labels.EditSliderImage')); ?></li>
     </ol>
@@ -76,55 +76,7 @@
                                   </div>
                                 </div>
                                 
-                                <div class="form-group">
-                                  <label for="name" class="col-sm-2 col-md-3 control-label"><?php echo e(trans('labels.Categories')); ?></label>
-                                  <div class="col-sm-10 col-md-4">
-                                      <select class="form-control" name="type" id="bannerType">
-                                          <option value="category" <?php if($result['sliders'][0]->type=='category'): ?> selected <?php endif; ?>>
-                                          <?php echo e(trans('labels.ChooseSubCategory')); ?></option>
-                                          <option value="product" <?php if($result['sliders'][0]->type=='product'): ?> selected <?php endif; ?>><?php echo e(trans('labels.Product')); ?></option>
-                                          <option value="topseller" <?php if($result['sliders'][0]->type=='topseller'): ?> selected <?php endif; ?>><?php echo e(trans('labels.TopSeller')); ?></option>
-                                          <option value="special" <?php if($result['sliders'][0]->type=='special'): ?> selected <?php endif; ?>><?php echo e(trans('labels.Deals')); ?></option>
-                                          <option value="mostliked" <?php if($result['sliders'][0]->type=='mostliked'): ?> selected <?php endif; ?>><?php echo e(trans('labels.MostLiked')); ?></option>                                          
-                                      </select>
-                                       <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
-                                      <?php echo e(trans('labels.ChooseSliderToAsscociateWith')); ?></span>
-                                  </div>
-                                </div>
-                                
-                                <!--<div class="form-group slider-link">
-                                  <label for="name" class="col-sm-2 col-md-3 control-label">Banners Link </label>
-                                  <div class="col-sm-10 col-md-4">
-                                    <?php echo Form::text('sliders_url', '', array('class'=>'form-control','id'=>'sliders_url')); ?>
-
-                                  </div>
-                                </div>-->
-                                
-                                <div class="form-group categoryContent" <?php if($result['sliders'][0]->type!='category'): ?> style="display: none" <?php endif; ?> >
-                                  <label for="name" class="col-sm-2 col-md-3 control-label"><?php echo e(trans('labels.Categories')); ?></label>
-                                  <div class="col-sm-10 col-md-4">
-                                      <select class="form-control" name="categories_id" id="categories_id">
-                                      <?php $__currentLoopData = $result['categories']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                		<option value="<?php echo e($category->slug); ?>"><?php echo e($category->name); ?></option>
-                                      <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                      </select>
-                                      <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
-                                      <?php echo e(trans('labels.CategoriessliderText')); ?></span>
-                                  </div>
-                                </div>
-                                
-                                <div class="form-group productContent" <?php if($result['sliders'][0]->type!='product'): ?> style="display: none" <?php endif; ?>>
-                                  <label for="name" class="col-sm-2 col-md-3 control-label"><?php echo e(trans('labels.Products')); ?></label>
-                                  <div class="col-sm-10 col-md-4">
-                                      <select class="form-control" name="products_id" id="products_id">
-                                      <?php $__currentLoopData = $result['products']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $products_data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                		<option value="<?php echo e($products_data->products_slug); ?>"><?php echo e($products_data->products_name); ?></option>
-                                      <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                      </select>
-                                     <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
-                                      <?php echo e(trans('labels.ProductsSliderText')); ?></span>
-                                  </div>
-                                </div>
+                                   
                                 
                                 <div class="form-group">
                                   <label for="name" class="col-sm-2 col-md-3 control-label"><?php echo e(trans('labels.Image')); ?></label>
@@ -147,24 +99,6 @@
                                   </div>
                                 </div>-->
                                 
-                                <div class="form-group">
-                                  <label for="name" class="col-sm-2 col-md-3 control-label"><?php echo e(trans('labels.ExpiryDate')); ?></label>
-                                  <div class="col-sm-10 col-md-4">
-                                  
-                                 
-                                  
-                                   <?php if(!empty($result['sliders'][0]->expires_date)): ?>
-                                    <?php echo Form::text('expires_date', date('d/m/Y', strtotime($result['sliders'][0]->expires_date)), array('class'=>'form-control datepicker', 'id'=>'expires_date')); ?>
-
-                                   <?php else: ?>
-                                    <?php echo Form::text('expires_date', '', array('class'=>'form-control datepicker', 'id'=>'expires_date')); ?>
-
-                                    
-                                   <?php endif; ?>
-                                   <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
-                                    <?php echo e(trans('labels.ExpiryDateSlider')); ?></span>
-                                  </div>
-                                </div>
                                 
                                 <div class="form-group">
                                   <label for="name" class="col-sm-2 col-md-3 control-label"><?php echo e(trans('labels.Status')); ?></label>

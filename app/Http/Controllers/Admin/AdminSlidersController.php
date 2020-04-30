@@ -110,8 +110,6 @@ class AdminSlidersController extends Controller
 				'sliders_image'			 =>	  $uploadImage,
 				'sliders_url'	 		 =>   $sliders_url,
 				'status'	 			 =>   $request->status,
-				'expires_date'			 =>	  $expiryDateFormate,
-				'type'					 =>	  $request->type,
 				'languages_id'			 =>	  $request->languages_id
 				]);
 										
@@ -140,9 +138,7 @@ class AdminSlidersController extends Controller
 		$myVar = new AdminSiteSettingController();
 		$result['languages'] = $myVar->getLanguages();
 		
-		$result['categories'] = $categories;
-		$result['products'] = $products;		
-		
+		 
 		return view("admin.editslide",$title)->with('result', $result);
 	}
 	
@@ -166,13 +162,7 @@ class AdminSlidersController extends Controller
 			$uploadImage = $request->oldImage;
 		}
 		
-		if($type=='category'){
-			$sliders_url = $request->categories_id;
-		}else if($type=='product'){
-			$sliders_url = $request->products_id;
-		}else{
-			$sliders_url = '';
-		}
+		$sliders_url = '';
 		
 		$countryData = array();		
 		$message = Lang::get("labels.SliderUpdatedMessage");
@@ -184,8 +174,6 @@ class AdminSlidersController extends Controller
 					'sliders_image'			 =>	  $uploadImage,
 					'sliders_url'	 		 =>   $sliders_url,
 					'status'	 			 =>   $request->status,
-					'expires_date'			 =>	  $expiryDateFormate,
-					'type'					 =>	  $request->type,
 					'languages_id'			 =>	  $request->languages_id
 					]);
 				

@@ -12,7 +12,7 @@
   </section>
   
   <!-- Main content -->
-  <section class="content"> 
+  <section class="content">  
     <!-- Info boxes --> 
     
     <!-- /.row -->
@@ -73,64 +73,7 @@
                                   </div>
                                 </div>
                                 
-                                <div class="form-group">
-                                  <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.Type') }}</label>
-                                  <div class="col-sm-10 col-md-4">
-                                      <select class="form-control" name="type" id="bannerType">
-                                          <option value="category">{{ trans('labels.ChooseSubCategory') }}</option>
-                                          <option value="product">{{ trans('labels.Product') }}</option>
-                                          <option value="topseller">{{ trans('labels.TopSeller') }}</option>
-                                          <option value="special">{{ trans('labels.Deals') }}</option>
-                                          <option value="mostliked">{{ trans('labels.MostLiked') }}</option>
-                                      </select>
-                                      <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
-                                      {{ trans('labels.ChooseSliderToAsscociateWith') }}</span>
-                                  </div>
-                                </div>
-                                
-                                <!--<div class="form-group slider-link">
-                                  <label for="name" class="col-sm-2 col-md-3 control-label">Sliders Link </label>
-                                  <div class="col-sm-10 col-md-4">
-                                    {!! Form::text('sliders_url', '', array('class'=>'form-control','id'=>'sliders_url')) !!}
-                                  </div>
-                                </div>-->
-                                
-                                <div class="form-group categoryContent">
-                                  <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.Categories') }}</label>
-                                  <div class="col-sm-10 col-md-4">
-                                      <select class="form-control" name="categories_id" id="categories_id">
-                                      @foreach($result['categories'] as $category)
-                                		<option value="{{ $category->slug}}">{{ $category->name}}</option>
-                                      @endforeach
-                                      </select>
-                                      <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
-                                      {{ trans('labels.CategoriessliderText') }}</span>
-                                  </div>
-                                </div>
-                                
-                                <div class="form-group productContent" style="display: none">
-                                  <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.Products') }}</label>
-                                  <div class="col-sm-10 col-md-4">
-                                      <select class="form-control" name="products_id" id="products_id">
-                                      @foreach($result['products'] as $products_data)
-                                		<option value="{{ $products_data->products_slug }}">{{ $products_data->products_name }}</option>
-                                      @endforeach
-                                      </select>
-                                      <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
-                                      {{ trans('labels.ProductsSliderText') }}</span>
-                                  </div>
-                                </div>
-                                
-                                
-                                
-                                <div class="form-group">
-                                  <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.ExpiryDate') }}</label>
-                                  <div class="col-sm-10 col-md-4">
-                                    <input readonly class="form-control datepicker field-validate" type="text" name="expires_date" value="">
-                                    <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
-                                    {{ trans('labels.ExpiryDateSlider') }}</span>
-                                  </div>
-                                </div>
+                                  
                                 
                                 <div class="form-group">
                                   <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.Status') }}</label>

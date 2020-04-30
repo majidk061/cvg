@@ -71,54 +71,7 @@
                                   </div>
                                 </div>
                                 
-                                <div class="form-group">
-                                  <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.Categories') }}</label>
-                                  <div class="col-sm-10 col-md-4">
-                                      <select class="form-control" name="type" id="bannerType">
-                                          <option value="category" @if($result['sliders'][0]->type=='category') selected @endif>
-                                          {{ trans('labels.ChooseSubCategory') }}</option>
-                                          <option value="product" @if($result['sliders'][0]->type=='product') selected @endif>{{ trans('labels.Product') }}</option>
-                                          <option value="topseller" @if($result['sliders'][0]->type=='topseller') selected @endif>{{ trans('labels.TopSeller') }}</option>
-                                          <option value="special" @if($result['sliders'][0]->type=='special') selected @endif>{{ trans('labels.Deals') }}</option>
-                                          <option value="mostliked" @if($result['sliders'][0]->type=='mostliked') selected @endif>{{ trans('labels.MostLiked') }}</option>                                          
-                                      </select>
-                                       <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
-                                      {{ trans('labels.ChooseSliderToAsscociateWith') }}</span>
-                                  </div>
-                                </div>
-                                
-                                <!--<div class="form-group slider-link">
-                                  <label for="name" class="col-sm-2 col-md-3 control-label">Banners Link </label>
-                                  <div class="col-sm-10 col-md-4">
-                                    {!! Form::text('sliders_url', '', array('class'=>'form-control','id'=>'sliders_url')) !!}
-                                  </div>
-                                </div>-->
-                                
-                                <div class="form-group categoryContent" @if($result['sliders'][0]->type!='category') style="display: none" @endif >
-                                  <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.Categories') }}</label>
-                                  <div class="col-sm-10 col-md-4">
-                                      <select class="form-control" name="categories_id" id="categories_id">
-                                      @foreach($result['categories'] as $category)
-                                		<option value="{{ $category->slug}}">{{ $category->name}}</option>
-                                      @endforeach
-                                      </select>
-                                      <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
-                                      {{ trans('labels.CategoriessliderText') }}</span>
-                                  </div>
-                                </div>
-                                
-                                <div class="form-group productContent" @if($result['sliders'][0]->type!='product') style="display: none" @endif>
-                                  <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.Products') }}</label>
-                                  <div class="col-sm-10 col-md-4">
-                                      <select class="form-control" name="products_id" id="products_id">
-                                      @foreach($result['products'] as $products_data)
-                                		<option value="{{ $products_data->products_slug }}">{{ $products_data->products_name }}</option>
-                                      @endforeach
-                                      </select>
-                                     <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
-                                      {{ trans('labels.ProductsSliderText') }}</span>
-                                  </div>
-                                </div>
+                                   
                                 
                                 <div class="form-group">
                                   <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.Image') }}</label>
@@ -139,22 +92,6 @@
                                   </div>
                                 </div>-->
                                 
-                                <div class="form-group">
-                                  <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.ExpiryDate') }}</label>
-                                  <div class="col-sm-10 col-md-4">
-                                  
-                                 
-                                  
-                                   @if(!empty($result['sliders'][0]->expires_date))
-                                    {!! Form::text('expires_date', date('d/m/Y', strtotime($result['sliders'][0]->expires_date)), array('class'=>'form-control datepicker', 'id'=>'expires_date')) !!}
-                                   @else
-                                    {!! Form::text('expires_date', '', array('class'=>'form-control datepicker', 'id'=>'expires_date')) !!}
-                                    
-                                   @endif
-                                   <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
-                                    {{ trans('labels.ExpiryDateSlider') }}</span>
-                                  </div>
-                                </div>
                                 
                                 <div class="form-group">
                                   <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.Status') }}</label>

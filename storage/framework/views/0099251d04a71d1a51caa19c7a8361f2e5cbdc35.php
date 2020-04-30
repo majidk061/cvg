@@ -5,7 +5,7 @@
   <section class="content-header">
     <h1> <?php echo e(trans('labels.editconstantbanner')); ?> <small><?php echo e(trans('labels.editconstantbanner')); ?>...</small> </h1>
     <ol class="breadcrumb">
-       <li><a href="<?php echo e(URL::to('admin/dashboard/this_month')); ?>"><i class="fa fa-dashboard"></i> <?php echo e(trans('labels.breadcrumb_dashboard')); ?></a></li>
+       <li><a href="#"><i class="fa fa-dashboard"></i> <?php echo e(trans('labels.breadcrumb_dashboard')); ?></a></li>
       <li><a href="<?php echo e(URL::to('admin/constantbanners')); ?>"><i class="fa fa-bars"></i> <?php echo e(trans('labels.ListingConstantBanners')); ?></a></li>
       <li class="active"><?php echo e(trans('labels.editconstantbanner')); ?></li>
     </ol>
