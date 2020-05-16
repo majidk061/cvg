@@ -123,8 +123,7 @@ line-height: 1.3;
                 </div>
                 <!-- layer 3 -->
                 <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
-                  <a class="ready-btn right-btn page-scroll" href="{{URL::to('services')}}">See Services</a>
-                  <a class="ready-btn page-scroll" href="{{URL::to('our-company')}}">Learn More</a>
+                   
                 </div>
               </div>
             </div>
@@ -150,9 +149,9 @@ line-height: 1.3;
     <section id="features" class="features section-bg">
       <div class="container">
 
-        <div class="section-title">
-          <h2 data-aos="fade-in"><?=$result['pages'][0]->name?></h2>
-        </div>
+        <!--<div class="section-title">-->
+        <!--  <h2 data-aos="fade-in"><?/*=$result['pages'][0]->name*/?></h2>-->
+        <!--</div>-->
         <div class="row content">
           <div class="col-md-5 order-2 order-md-1" data-aos="fade-right">
             <img src="{{asset('public/assets/img/Project Managers.webp')}}" class="img-fluid" alt="">
